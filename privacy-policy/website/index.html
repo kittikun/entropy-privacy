@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Privacy &amp; Cookies — The Aurora Chronicles</title>
+<meta name="description" content="How the entropy.kittikun.jp website uses analytics and cookies, and how to control them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#10131a; --panel:#181c26; --panel-2:#1f2430;
+    --border:rgba(255,255,255,.07); --border-strong:rgba(255,255,255,.14);
+    --text:#eceef4; --muted:#878da0; --accent:#64b4ff;
+    --serif:'GFS Didot',Georgia,'Times New Roman',serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{color:#8ecbff}
+  .wrap{max-width:760px; margin:0 auto; padding:0 1.25rem}
+
+  /* HERO */
+  .hero{
+    position:relative; text-align:center; padding:5rem 1.25rem 3rem;
+    background:radial-gradient(ellipse 85% 65% at 50% -8%, rgba(100,180,255,.15), transparent 60%);
+  }
+  .eyebrow{
+    font-size:.7rem; letter-spacing:.34em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:1.4rem;
+  }
+  .eyebrow a{ color:var(--muted); }
+  .eyebrow a:hover{ color:var(--accent); }
+  .hero h1{
+    font-family:var(--serif); font-weight:400; color:#fff;
+    font-size:clamp(2rem,5vw,2.8rem); line-height:1.1;
+  }
+  .hero .subtitle{ color:#aeb4c4; margin-top:.8rem; font-size:1.02rem; }
+  .hero .effective{ color:var(--muted); font-size:.9rem; margin-top:.6rem; }
+
+  /* BODY */
+  main{ padding-bottom:1rem; }
+  h2{ font-family:var(--serif); font-size:1.4rem; font-weight:400; color:#fff;
+    margin-top:2.6rem; margin-bottom:.9rem; padding-bottom:.3rem; border-bottom:1px solid var(--border); }
+  p{ color:#c7cbd8; margin-bottom:1rem; }
+  ul{ margin:0 0 1rem 1.4rem; color:#c7cbd8; }
+  li{ margin-bottom:.45rem; }
+  strong{ color:#fff; font-weight:600; }
+  code{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.86em;
+    background:var(--panel-2); padding:.1rem .38rem; border-radius:5px; color:#cdd3e1; }
+
+  .contact-card{
+    background:var(--panel); border:1px solid var(--border);
+    border-radius:14px; padding:1.4rem 1.5rem; margin-top:.4rem;
+  }
+  .contact-card p{ margin:0; color:#c7cbd8; }
+  .contact-card p + p{ margin-top:.6rem; }
+
+  .manage-btn{
+    font:inherit; font-size:.92rem; font-weight:500; cursor:pointer; border-radius:9px;
+    padding:.55rem 1.15rem; background:var(--accent); color:#0a1422; border:1px solid var(--accent);
+    transition:background .15s;
+  }
+  .manage-btn:hover{ background:#7cc2ff; }
+
+  /* FOOTER */
+  footer{ border-top:1px solid var(--border); padding:2.4rem 0 3.4rem; color:var(--muted); font-size:.86rem; margin-top:2.6rem; }
+  footer .pub{ color:#aab0c2; margin-bottom:.5rem; }
+  footer .pub strong{ color:#fff; font-weight:600; }
+  footer a{ color:var(--muted); }
+  footer a:hover{ color:var(--accent); }
+  .foot-nav{ display:flex; gap:1.2rem; flex-wrap:wrap; margin:.6rem 0 1.2rem; }
+</style>
+<script src="/consent.js"></script>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="eyebrow"><a href="/">The Aurora Chronicles</a></div>
+    <h1>Website Privacy &amp; Cookies</h1>
+    <p class="subtitle">entropy.kittikun.jp &mdash; by Entropy</p>
+    <p class="effective">Effective date: June 3, 2026</p>
+  </header>
+
+  <main class="wrap">
+
+    <h2>1. What This Page Covers</h2>
+    <p>
+        This notice explains how the <strong>entropy.kittikun.jp</strong> website handles analytics and cookies.
+        It is separate from the <a href="/privacy-policy">game's Privacy Policy</a>, which covers data collected
+        inside The Aurora Chronicles on Steam, iOS, and Android.
+    </p>
+
+    <h2>2. Analytics We Use</h2>
+    <p>
+        We use <strong>Google Analytics 4</strong> to understand how many people visit this website and where they
+        come from &mdash; for example, total visits, which pages are viewed, the referring site or search, and
+        approximate location (country or region). This helps us see which announcements and channels are reaching people.
+    </p>
+    <p>
+        We use this only in aggregate. We do not build advertising profiles, we do not show ads, and we do not sell
+        or share this data for advertising. Ad-related and personalization signals are disabled.
+    </p>
+
+    <h2>3. Cookies</h2>
+    <p>
+        When analytics is active, Google Analytics sets first-party cookies (named <code>_ga</code> and
+        <code>_ga_&lt;id&gt;</code>) containing a randomly generated identifier used to distinguish returning from new
+        visits. These cookies do not contain your name, email, or anything you type. They expire automatically (up to
+        about two years) and can be cleared at any time in your browser.
+    </p>
+    <p>
+        No analytics cookies are set until analytics is active (see Section 4). Google Analytics 4 does not store your
+        raw IP address.
+    </p>
+
+    <h2>4. Your Consent &amp; How to Change It</h2>
+    <p>
+        If you visit from the EU, EEA, the UK, or Switzerland, analytics stays switched off until you choose
+        &ldquo;Accept&rdquo; on the cookie banner. If you decline, no analytics cookies are set and the site works
+        normally. Visitors from other regions have analytics enabled by default, as permitted by local law.
+    </p>
+    <p>You can change your choice at any time:</p>
+    <p><button class="manage-btn" type="button" onclick="ecConsentReset()">Review my cookie choice</button></p>
+    <p>You can also clear this site's cookies and site data in your browser, which resets the banner.</p>
+
+    <h2>5. Embedded Video</h2>
+    <p>
+        Episode trailers are embedded from YouTube using the privacy-enhanced <code>youtube-nocookie.com</code> mode and
+        load only after you click play. YouTube may set its own cookies once a video plays; that playback is governed by
+        <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.
+    </p>
+
+    <h2>6. Where Data Goes</h2>
+    <p>
+        Website analytics is processed by Google (Google Analytics). Data may be transferred to and processed on Google's
+        servers outside Japan and the EEA, including in the United States, subject to Google's applicable data-transfer
+        safeguards. Google Analytics data is retained for up to 14 months.
+    </p>
+
+    <h2>7. Contact</h2>
+    <p>For any question about this notice, reach us through our support page:</p>
+    <div class="contact-card">
+        <p><strong>Entropy</strong> &middot; Tokyo, Japan</p>
+        <p><a href="/support">Visit the Support page &rarr;</a></p>
+    </div>
+
+  </main>
+
+  <footer class="wrap">
+    <p class="pub"><strong>Entropy</strong> &middot; Tokyo, Japan &middot; 個人事業主</p>
+    <div class="foot-nav">
+      <a href="/">Home</a>
+      <a href="/support">Support</a>
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/privacy-policy/website">Cookies</a>
+      <a href="https://store.steampowered.com/app/4262410/The_Aurora_Chronicles/">Steam</a>
+    </div>
+    <p>&copy; 2025&ndash;2026 Entropy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
