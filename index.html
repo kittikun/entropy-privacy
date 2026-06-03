@@ -143,14 +143,6 @@
   /* EPISODES */
   .ep-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:1.1rem; }
   .ep-card{ background:var(--panel); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
-  .ep-embed{ position:relative; display:block; width:100%; aspect-ratio:16/9; border:0; padding:0; margin:0; cursor:pointer; background:#000; }
-  .ep-embed img{ width:100%; height:100%; object-fit:cover; display:block; opacity:.82; transition:opacity .2s; }
-  .ep-embed:hover img{ opacity:1; }
-  .ep-embed .play{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
-  .ep-embed .play svg{ width:60px; height:60px; transition:transform .15s; }
-  .ep-embed:hover .play svg{ transform:scale(1.06); }
-  .ep-embed .play circle{ fill:rgba(16,19,26,.66); stroke:rgba(255,255,255,.55); transition:fill .15s,stroke .15s; }
-  .ep-embed:hover .play circle{ fill:rgba(100,180,255,.85); stroke:#bcd9ff; }
   .ep-card iframe{ width:100%; aspect-ratio:16/9; display:block; border:0; }
   .ep-meta{ display:flex; align-items:center; gap:.8rem; padding:.85rem 1.1rem; }
   .ep-meta .no{ font-size:.76rem; color:var(--muted); letter-spacing:.06em; font-variant-numeric:tabular-nums; }
@@ -278,17 +270,11 @@
       <h2>Episodes</h2>
       <div class="ep-grid">
         <div class="ep-card">
-          <button class="ep-embed" data-id="ctyiPibf2ZE" aria-label="Play the First Light trailer">
-            <img src="https://i.ytimg.com/vi/ctyiPibf2ZE/maxresdefault.jpg" alt="" loading="lazy" onerror="this.src='https://i.ytimg.com/vi/ctyiPibf2ZE/hqdefault.jpg'">
-            <span class="play"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11"/><path d="M10 8.2l6 3.8-6 3.8z" fill="#fff"/></svg></span>
-          </button>
+          <iframe src="https://www.youtube-nocookie.com/embed/ctyiPibf2ZE?rel=0" title="First Light &mdash; trailer" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <div class="ep-meta"><span class="no">EP 01</span><span class="ttl">First Light</span><span class="tag">Out now</span></div>
         </div>
         <div class="ep-card">
-          <button class="ep-embed" data-id="2EQVswjVR_4" aria-label="Play The Garden trailer">
-            <img src="https://i.ytimg.com/vi/2EQVswjVR_4/maxresdefault.jpg" alt="" loading="lazy" onerror="this.src='https://i.ytimg.com/vi/2EQVswjVR_4/hqdefault.jpg'">
-            <span class="play"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11"/><path d="M10 8.2l6 3.8-6 3.8z" fill="#fff"/></svg></span>
-          </button>
+          <iframe src="https://www.youtube-nocookie.com/embed/2EQVswjVR_4?rel=0" title="The Garden &mdash; trailer" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <div class="ep-meta"><span class="no">EP 02</span><span class="ttl">The Garden</span><span class="tag">Out now</span></div>
         </div>
       </div>
@@ -329,20 +315,6 @@
     </div>
     <p>&copy; 2025&ndash;2026 Entropy. All rights reserved.</p>
   </footer>
-
-  <script>
-    document.querySelectorAll('.ep-embed').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        var id = btn.dataset.id;
-        var f = document.createElement('iframe');
-        f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
-        f.title = btn.getAttribute('aria-label');
-        f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-        f.setAttribute('allowfullscreen', '');
-        btn.replaceWith(f);
-      });
-    });
-  </script>
 
 </body>
 </html>
