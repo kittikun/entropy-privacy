@@ -1,8 +1,9 @@
 /* Entropy — website analytics consent (Google Consent Mode v2)
-   Single source of truth: loaded once per page via <script src="/consent.js"></script>
-   in <head>. Sets consent to denied by default (no cookies on load), loads the
-   Google tag, then either auto-grants outside consent-required regions or shows a
-   banner inside the EU/EEA/UK/Switzerland. */
+   Loaded once per page via <script src="/consent.js"></script> in <head>.
+   Consent defaults to denied (no cookies on load), then either auto-grants
+   outside consent-required regions or shows an accept/decline banner inside
+   the EU/EEA/UK/Switzerland. The banner can also be re-opened from any page
+   via ecConsentManage() / ecConsentReset() so visitors can change their mind. */
 (function () {
   var GA_ID = 'G-SDYXJ6EC4K';
   var STORE_KEY = 'ec_consent_v1';
@@ -29,52 +30,76 @@
   gtag('js', new Date());
   gtag('config', GA_ID);
 
-  /* Load the Google tag. It honours the denied default above and stays cookieless
-     until analytics_storage is granted. */
+  /* Load the Google tag. It honours the denied default and stays cookieless until granted. */
   var tag = document.createElement('script');
   tag.async = true;
   tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
   document.head.appendChild(tag);
 
-  function grant() { gtag('consent', 'update', { analytics_storage: 'granted' }); }
   function remember(v) {
     try { localStorage.setItem(STORE_KEY, JSON.stringify({ v: v, t: Date.now() })); } catch (e) {}
   }
   function recall() {
     try { return JSON.parse(localStorage.getItem(STORE_KEY)); } catch (e) { return null; }
   }
+  function currentChoice() {
+    var p = recall();
+    return p && p.v ? p.v : 'unset';
+  }
 
-  /* Lets a "Review my cookie choice" control re-open the banner from any page. */
-  window.ecConsentReset = function () {
-    try { localStorage.removeItem(STORE_KEY); } catch (e) {}
-    location.reload();
-  };
+  function grant() { gtag('consent', 'update', { analytics_storage: 'granted' }); }
+
+  function deny() {
+    gtag('consent', 'update', { analytics_storage: 'denied' });
+    clearGaCookies();
+  }
+
+  /* Best-effort removal of any _ga cookies already set, so "Decline" is a true opt-out. */
+  function clearGaCookies() {
+    var host = location.hostname;
+    var domains = ['', host, '.' + host];
+    var parts = host.split('.');
+    if (parts.length > 2) { domains.push('.' + parts.slice(-2).join('.')); }
+    document.cookie.split(';').forEach(function (c) {
+      var name = c.split('=')[0].trim();
+      if (name.indexOf('_ga') === 0) {
+        domains.forEach(function (d) {
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + (d ? '; domain=' + d : '');
+        });
+      }
+    });
+  }
+
+  /* Re-open the banner on demand from any page (e.g. the "Review my cookie choice"
+     button on the cookies page). Works in every region. */
+  window.ecConsentManage = function () { showBanner(true); };
+  window.ecConsentReset = window.ecConsentManage; /* backwards-compatible alias */
 
   var prior = recall();
   if (prior) {
     if (prior.v === 'granted') grant();
-    return; /* already decided — no banner */
+    /* a choice already exists — no banner on load */
+  } else {
+    /* No prior choice: decide by region using Cloudflare's edge trace. */
+    fetch('/cdn-cgi/trace')
+      .then(function (r) { return r.text(); })
+      .then(function (t) {
+        var m = t.match(/\bloc=([A-Z]{2})\b/);
+        var loc = m ? m[1] : null;
+        if (loc && CONSENT_REQUIRED.indexOf(loc) === -1) {
+          grant();            /* outside consent-required regions: enable, no banner */
+          remember('granted');
+        } else {
+          showBanner(false);  /* consent required, or region unknown (fail safe) */
+        }
+      })
+      .catch(function () { showBanner(false); });
   }
 
-  /* No prior choice: decide by region using Cloudflare's edge trace. */
-  fetch('/cdn-cgi/trace')
-    .then(function (r) { return r.text(); })
-    .then(function (t) {
-      var m = t.match(/\bloc=([A-Z]{2})\b/);
-      var loc = m ? m[1] : null;
-      if (loc && CONSENT_REQUIRED.indexOf(loc) === -1) {
-        grant();            /* outside consent-required regions: enable, no banner */
-        remember('granted');
-      } else {
-        showBanner();       /* consent required, or region unknown (fail safe) */
-      }
-    })
-    .catch(function () { showBanner(); });
-
-  function showBanner() {
-    if (document.getElementById('ec-consent')) return;
-
+  function injectStyle() {
+    if (document.getElementById('ec-consent-style')) return;
     var css = document.createElement('style');
+    css.id = 'ec-consent-style';
     css.textContent =
       '#ec-consent{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:9999;max-width:540px;margin:0 auto;' +
       'background:var(--panel,#181c26);color:var(--text,#eceef4);border:1px solid var(--border-strong,rgba(255,255,255,.14));' +
@@ -83,6 +108,8 @@
       'opacity:0;transform:translateY(10px);transition:opacity .25s,transform .25s}' +
       '#ec-consent.in{opacity:1;transform:none}' +
       '#ec-consent p{margin:0 0 .85rem;font-size:.92rem;color:#c7cbd8}' +
+      '#ec-consent .ec-state{font-size:.82rem;color:var(--muted,#878da0);margin-bottom:.5rem}' +
+      '#ec-consent .ec-state strong{color:#fff;font-weight:600}' +
       '#ec-consent a{color:var(--accent,#64b4ff);text-decoration:none}' +
       '#ec-consent a:hover{text-decoration:underline}' +
       '#ec-consent .row{display:flex;gap:.6rem;justify-content:flex-end;flex-wrap:wrap}' +
@@ -93,12 +120,25 @@
       '#ec-consent .accept{background:var(--accent,#64b4ff);color:#0a1422;border-color:var(--accent,#64b4ff)}' +
       '#ec-consent .accept:hover{background:#7cc2ff}';
     document.head.appendChild(css);
+  }
+
+  function showBanner(forced) {
+    if (document.getElementById('ec-consent')) return;
+    injectStyle();
 
     var box = document.createElement('div');
     box.id = 'ec-consent';
     box.setAttribute('role', 'dialog');
     box.setAttribute('aria-label', 'Analytics consent');
-    box.innerHTML =
+
+    var stateLine = '';
+    if (forced) {
+      var choice = currentChoice();
+      var label = choice === 'granted' ? 'Analytics on' : choice === 'denied' ? 'Analytics off' : 'Not set yet';
+      stateLine = '<p class="ec-state">Current setting: <strong>' + label + '</strong></p>';
+    }
+
+    box.innerHTML = stateLine +
       '<p>We use Google Analytics to see how many people visit and where they come from. ' +
       'No ads, no profiling. Details in our <a href="/privacy-policy/website">website privacy &amp; cookies</a> notice.</p>' +
       '<div class="row">' +
@@ -116,7 +156,7 @@
       grant(); remember('granted'); dismiss();
     });
     box.querySelector('.decline').addEventListener('click', function () {
-      remember('denied'); dismiss();
+      deny(); remember('denied'); dismiss();
     });
   }
 })();
