@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--i18n:head-->
+<link rel="canonical" href="https://entropy.kittikun.jp/fr/privacy-policy/website/">
+<link rel="alternate" hreflang="en" href="https://entropy.kittikun.jp/privacy-policy/website/">
+<link rel="alternate" hreflang="fr" href="https://entropy.kittikun.jp/fr/privacy-policy/website/">
+<link rel="alternate" hreflang="ja" href="https://entropy.kittikun.jp/ja/privacy-policy/website/">
+<link rel="alternate" hreflang="x-default" href="https://entropy.kittikun.jp/privacy-policy/website/">
+<!--/i18n:head-->
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<title>Confidentialité &amp; cookies du site — The Aurora Chronicles</title>
+<meta name="description" content="Comment le site entropy.kittikun.jp utilise la mesure d'audience et les cookies, et comment les contrôler.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#10131a; --panel:#181c26; --panel-2:#1f2430;
+    --border:rgba(255,255,255,.07); --border-strong:rgba(255,255,255,.14);
+    --text:#eceef4; --muted:#878da0; --accent:#64b4ff;
+    --serif:'GFS Didot',Georgia,'Times New Roman',serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{color:#8ecbff}
+  .wrap{max-width:760px; margin:0 auto; padding:0 1.25rem}
+
+  /* HERO */
+  .hero{
+    position:relative; text-align:center; padding:5rem 1.25rem 3rem;
+    background:radial-gradient(ellipse 85% 65% at 50% -8%, rgba(100,180,255,.15), transparent 60%);
+  }
+  .eyebrow{
+    font-size:.7rem; letter-spacing:.34em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:1.4rem;
+  }
+  .eyebrow a{ color:var(--muted); }
+  .eyebrow a:hover{ color:var(--accent); }
+  .hero h1{
+    font-family:var(--serif); font-weight:400; color:#fff;
+    font-size:clamp(2rem,5vw,2.8rem); line-height:1.1;
+  }
+  .hero .subtitle{ color:#aeb4c4; margin-top:.8rem; font-size:1.02rem; }
+  .hero .effective{ color:var(--muted); font-size:.9rem; margin-top:.6rem; }
+
+  /* BODY */
+  main{ padding-bottom:1rem; }
+  h2{ font-family:var(--serif); font-size:1.4rem; font-weight:400; color:#fff;
+    margin-top:2.6rem; margin-bottom:.9rem; padding-bottom:.3rem; border-bottom:1px solid var(--border); }
+  p{ color:#c7cbd8; margin-bottom:1rem; }
+  ul{ margin:0 0 1rem 1.4rem; color:#c7cbd8; }
+  li{ margin-bottom:.45rem; }
+  strong{ color:#fff; font-weight:600; }
+  code{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.86em;
+    background:var(--panel-2); padding:.1rem .38rem; border-radius:5px; color:#cdd3e1; }
+
+  .contact-card{
+    background:var(--panel); border:1px solid var(--border);
+    border-radius:14px; padding:1.4rem 1.5rem; margin-top:.4rem;
+  }
+  .contact-card p{ margin:0; color:#c7cbd8; }
+  .contact-card p + p{ margin-top:.6rem; }
+
+  .manage-btn{
+    font:inherit; font-size:.92rem; font-weight:500; cursor:pointer; border-radius:9px;
+    padding:.55rem 1.15rem; background:var(--accent); color:#0a1422; border:1px solid var(--accent);
+    transition:background .15s;
+  }
+  .manage-btn:hover{ background:#7cc2ff; }
+
+  /* FOOTER */
+  footer{ border-top:1px solid var(--border); padding:2.4rem 0 3.4rem; color:var(--muted); font-size:.86rem; margin-top:2.6rem; }
+  footer .pub{ color:#aab0c2; margin-bottom:.5rem; }
+  footer .pub strong{ color:#fff; font-weight:600; }
+  footer a{ color:var(--muted); }
+  footer a:hover{ color:var(--accent); }
+  .foot-nav{ display:flex; gap:1.2rem; flex-wrap:wrap; margin:.6rem 0 1.2rem; }
+
+  /* i18n language switcher */
+  .hero .topbar{ position:absolute; top:1rem; right:1.1rem; }
+  .lang-inline{ display:inline-flex; align-items:center; gap:.55rem; font-size:.84rem; letter-spacing:.01em; }
+  .lang-inline a{ color:var(--muted); text-decoration:none; padding:.35rem .1rem; transition:color .15s; }
+  .lang-inline a:hover{ color:var(--text); }
+  .lang-inline .active{ color:var(--accent); font-weight:500; }
+  .lang-inline .sep{ color:var(--muted); opacity:.5; }
+  @media (max-width:560px){ .hero .topbar{ position:static; margin-bottom:1rem; } }
+</style>
+<script src="/consent.js"></script>
+</head>
+<body>
+
+  <header class="hero">
+    <!--i18n:switcher-->
+    <div class="topbar"><nav class="lang-inline" aria-label="Language"><a href="/privacy-policy/website/" hreflang="en">English</a><span class="sep">·</span><span class="active" aria-current="true">Français</span><span class="sep">·</span><a href="/ja/privacy-policy/website/" hreflang="ja">日本語</a></nav></div>
+    <!--/i18n:switcher-->
+    <div class="eyebrow"><a href="/fr/">The Aurora Chronicles</a></div>
+    <h1>Confidentialité &amp; cookies du site</h1>
+    <p class="subtitle">entropy.kittikun.jp &mdash; par Entropy</p>
+    <p class="effective">Date d'effet&#8239;: 4 juin 2026</p>
+  </header>
+
+  <main class="wrap">
+
+    <h2>1. Ce que couvre cette page</h2>
+    <p>
+        Cette notice explique comment le site <strong>entropy.kittikun.jp</strong> gère la mesure d'audience et les cookies. Elle est distincte de la <a href="/fr/privacy-policy">politique de confidentialité du jeu</a>, qui couvre les données collectées dans The Aurora Chronicles sur Steam, iOS et Android.
+    </p>
+
+    <h2>2. La mesure d'audience que nous utilisons</h2>
+    <p>
+        Nous utilisons <strong>Google Analytics 4</strong> pour comprendre combien de personnes visitent ce site et d'où elles viennent &mdash; par exemple, le nombre total de visites, les pages consultées, le site ou la recherche d'origine, et la localisation approximative (pays ou région). Cela nous aide à voir quelles annonces et quels canaux touchent le public.
+    </p>
+    <p>
+        Nous n'utilisons ces données que de façon agrégée. Nous ne créons pas de profils publicitaires, nous n'affichons pas de publicités et nous ne vendons ni ne partageons ces données à des fins publicitaires. Les signaux liés à la publicité et à la personnalisation sont désactivés.
+    </p>
+
+    <h2>3. Cookies</h2>
+    <p>
+        Lorsque la mesure d'audience est active, Google Analytics dépose des cookies internes (nommés <code>_ga</code> et <code>_ga_&lt;id&gt;</code>) contenant un identifiant généré aléatoirement, utilisé pour distinguer les visites récurrentes des nouvelles visites. Ces cookies ne contiennent ni votre nom, ni votre adresse e-mail, ni quoi que ce soit que vous saisissez. Ils expirent automatiquement (au bout d'environ deux ans) et peuvent être supprimés à tout moment dans votre navigateur.
+    </p>
+    <p>
+        Aucun cookie de mesure d'audience n'est déposé tant que celle-ci n'est pas active (voir la section 4). Google Analytics 4 ne conserve pas votre adresse IP brute.
+    </p>
+
+    <h2>4. Votre consentement &amp; comment le modifier</h2>
+    <p>
+        Si vous consultez le site depuis l'UE, l'EEE, le Royaume-Uni ou la Suisse, la mesure d'audience reste désactivée jusqu'à ce que vous choisissiez «&#8239;Accept&#8239;» sur la bannière de cookies. Si vous refusez, aucun cookie de mesure d'audience n'est déposé et le site fonctionne normalement. Pour les visiteurs d'autres régions, la mesure d'audience est activée par défaut, comme le permet la législation locale.
+    </p>
+    <p>Vous pouvez modifier votre choix à tout moment&#8239;:</p>
+    <p><button class="manage-btn" type="button" onclick="ecConsentReset()">Revoir mon choix concernant les cookies</button></p>
+    <p>Vous pouvez également effacer les cookies et les données de ce site dans votre navigateur, ce qui réinitialise la bannière.</p>
+
+    <h2>5. Vidéos intégrées</h2>
+    <p>
+        Les bandes-annonces des épisodes sont intégrées depuis YouTube via le mode de confidentialité renforcée (<code>youtube-nocookie.com</code>). Le lecteur se charge avec la page au lieu d'attendre un clic&#8239;: votre navigateur contacte donc YouTube (Google) lorsque les bandes-annonces apparaissent à l'écran &mdash; mais dans ce mode, YouTube ne dépose aucun cookie tant que vous ne lancez pas réellement une vidéo. Une fois la lecture lancée, YouTube peut déposer ses propres cookies&#8239;; cette lecture est régie par la <a href="https://policies.google.com/privacy">politique de confidentialité de Google</a>.
+    </p>
+
+    <h2>6. Où vont les données</h2>
+    <p>
+        Les données de mesure d'audience du site sont traitées par Google (Google Analytics). Ces données peuvent être transférées et traitées sur des serveurs de Google situés hors du Japon et de l'EEE, notamment aux États-Unis, sous réserve des garanties applicables de Google en matière de transfert de données. Les données de Google Analytics sont conservées pendant 14 mois maximum.
+    </p>
+
+    <h2>7. Contact</h2>
+    <p>Pour toute question concernant cette notice, contactez-nous via notre page de support&#8239;:</p>
+    <div class="contact-card">
+        <p><a href="/fr/support">Accéder à la page Support &rarr;</a></p>
+    </div>
+
+  </main>
+
+  <footer class="wrap">
+    <p class="pub"><strong>Entropy</strong> &middot; Tokyo, Japon &middot; 個人事業主</p>
+    <div class="foot-nav">
+      <a href="/fr/">Accueil</a>
+      <a href="/fr/support">Support</a>
+      <a href="/fr/privacy-policy">Confidentialité</a>
+      <a href="/fr/privacy-policy/website">Cookies</a>
+      <a href="https://store.steampowered.com/app/4262410/The_Aurora_Chronicles/">Steam</a>
+    </div>
+    <p>&copy; 2025&ndash;2026 Entropy. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--i18n:head-->
+<link rel="canonical" href="https://entropy.kittikun.jp/ja/privacy-policy/">
+<link rel="alternate" hreflang="en" href="https://entropy.kittikun.jp/privacy-policy/">
+<link rel="alternate" hreflang="fr" href="https://entropy.kittikun.jp/fr/privacy-policy/">
+<link rel="alternate" hreflang="ja" href="https://entropy.kittikun.jp/ja/privacy-policy/">
+<link rel="alternate" hreflang="x-default" href="https://entropy.kittikun.jp/privacy-policy/">
+<!--/i18n:head-->
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<title>プライバシーポリシー — The Aurora Chronicles</title>
+<meta name="description" content="Entropy による The Aurora Chronicles のプライバシーポリシー：収集するデータ、収集しないデータ、そしてお客様の権利について。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#10131a; --panel:#181c26; --panel-2:#1f2430;
+    --border:rgba(255,255,255,.07); --border-strong:rgba(255,255,255,.14);
+    --text:#eceef4; --muted:#878da0; --accent:#64b4ff;
+    --serif:'GFS Didot',Georgia,'Times New Roman',serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{color:#8ecbff}
+  .wrap{max-width:760px; margin:0 auto; padding:0 1.25rem}
+
+  /* HERO */
+  .hero{
+    position:relative; text-align:center; padding:5rem 1.25rem 3rem;
+    background:radial-gradient(ellipse 85% 65% at 50% -8%, rgba(100,180,255,.15), transparent 60%);
+  }
+  .eyebrow{
+    font-size:.7rem; letter-spacing:.34em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:1.4rem;
+  }
+  .eyebrow a{ color:var(--muted); }
+  .eyebrow a:hover{ color:var(--accent); }
+  .hero h1{
+    font-family:var(--serif); font-weight:400; color:#fff;
+    font-size:clamp(2rem,5vw,2.8rem); line-height:1.1;
+  }
+  .hero .subtitle{ color:#aeb4c4; margin-top:.8rem; font-size:1.02rem; }
+  .hero .effective{ color:var(--muted); font-size:.9rem; margin-top:.6rem; }
+
+  /* BODY */
+  main{ padding-bottom:1rem; }
+  h2{ font-family:var(--serif); font-size:1.4rem; font-weight:400; color:#fff;
+    margin-top:2.6rem; margin-bottom:.9rem; padding-bottom:.3rem; border-bottom:1px solid var(--border); }
+  p{ color:#c7cbd8; margin-bottom:1rem; }
+  ul{ margin:0 0 1rem 1.4rem; color:#c7cbd8; }
+  li{ margin-bottom:.45rem; }
+  strong{ color:#fff; font-weight:600; }
+
+  .contact-card{
+    background:var(--panel); border:1px solid var(--border);
+    border-radius:14px; padding:1.4rem 1.5rem; margin-top:.4rem;
+  }
+  .contact-card p{ margin:0; color:#c7cbd8; }
+  .contact-card p + p{ margin-top:.6rem; }
+
+  /* FOOTER */
+  footer{ border-top:1px solid var(--border); padding:2.4rem 0 3.4rem; color:var(--muted); font-size:.86rem; margin-top:2.6rem; }
+  footer .pub{ color:#aab0c2; margin-bottom:.5rem; }
+  footer .pub strong{ color:#fff; font-weight:600; }
+  footer a{ color:var(--muted); }
+  footer a:hover{ color:var(--accent); }
+  .foot-nav{ display:flex; gap:1.2rem; flex-wrap:wrap; margin:.6rem 0 1.2rem; }
+
+  /* i18n language switcher */
+  .hero .topbar{ position:absolute; top:1rem; right:1.1rem; }
+  .lang-inline{ display:inline-flex; align-items:center; gap:.55rem; font-size:.84rem; letter-spacing:.01em; }
+  .lang-inline a{ color:var(--muted); text-decoration:none; padding:.35rem .1rem; transition:color .15s; }
+  .lang-inline a:hover{ color:var(--text); }
+  .lang-inline .active{ color:var(--accent); font-weight:500; }
+  .lang-inline .sep{ color:var(--muted); opacity:.5; }
+  @media (max-width:560px){ .hero .topbar{ position:static; margin-bottom:1rem; } }
+</style>
+<!-- Website analytics & consent (Google Consent Mode v2, EEA-gated) -->
+<script src="/consent.js"></script>
+</head>
+<body>
+
+  <header class="hero">
+    <!--i18n:switcher-->
+    <div class="topbar"><nav class="lang-inline" aria-label="Language"><a href="/privacy-policy/" hreflang="en">English</a><span class="sep">·</span><a href="/fr/privacy-policy/" hreflang="fr">Français</a><span class="sep">·</span><span class="active" aria-current="true">日本語</span></nav></div>
+    <!--/i18n:switcher-->
+    <div class="eyebrow"><a href="/ja/">The Aurora Chronicles</a></div>
+    <h1>プライバシーポリシー</h1>
+    <p class="subtitle">The Aurora Chronicles &mdash; Entropy 提供</p>
+    <p class="effective">施行日：2026年2月14日 &middot; 最終更新：2026年6月3日</p>
+  </header>
+
+  <main class="wrap">
+
+    <h2>1. 運営者について</h2>
+    <p>
+        The Aurora Chronicles は kittikun が開発し、日本・東京を拠点とする個人事業主 Entropy が配信しています。本ポリシーは、Steam、iOS、Android を含むすべてのプラットフォームの The Aurora Chronicles に適用されます。
+    </p>
+
+    <h2>2. 収集するデータ</h2>
+    <p>ゲーム体験の提供に必要なものだけを収集します：</p>
+    <ul>
+        <li><strong>セーブデータ：</strong>ゲームの進行状況は、お使いのデバイスにローカル保存されます。Steam では、セーブデータは Steam Cloud 経由でも同期されます。現在のところ、当社独自のサーバーにセーブデータを保存することはありません。</li>
+        <li><strong>選択統計：</strong>ゲーム内で選択を行うと、コミュニティ統計（例：各選択肢を選んだプレイヤーの割合）を表示するために、その選択が記録されます。選択は、お使いのデバイス上で Firebase が自動生成する匿名識別子に紐づけられます。このデータは Supabase（クラウドデータベース）に保存されます。他のプレイヤーに見えるのは集計された割合（例：「プレイヤーの65%がオプションAを選択」）のみで、個々の選択が見えることはありません。</li>
+        <li><strong>購入（モバイルのみ）：</strong>iOS および Android では、アプリ内課金は Apple および Google によって処理されます。購入済みコンテンツへのアクセス権の管理には RevenueCat を使用しています。RevenueCat は、購入したコンテンツのロック解除や再インストール時の復元のため、アプリが生成したユーザー識別子、購入・取引履歴、および基本的なデバイス情報を受け取ります。お客様のクレジットカード情報を当社が受け取ったり保存したりすることは一切ありません。</li>
+        <li><strong>アナリティクスとクラッシュレポート：</strong>ゲームの品質向上、バグの特定、プレイヤーがコンテンツとどのように関わっているかの把握のため、匿名のゲームプレイ分析データを収集します。このデータには、セッション時間、デバイス情報（OS、言語、画面解像度）、アプリのバージョン、エピソードの進行やメニュー操作といったゲーム内イベントが含まれる場合があります。アナリティクスおよびクラッシュ/パフォーマンス診断は、すべてのプラットフォーム（Windows、macOS、Linux、iOS、Android）で Unity Technologies（Unity Gaming Services）によって処理されます。モバイル（iOS、Android）では、ゲームプレイ分析は追加で Google（Google Analytics for Firebase）によって、クラッシュレポート &mdash; デバイスの種類、OS のバージョン、クラッシュログを含む &mdash; は Firebase Crashlytics によって処理されます。当社は、アナリティクスを通じて個人を特定できる情報を意図的に収集することはなく、アナリティクスデータを個々のユーザーアカウントに紐づけることもありません。</li>
+        <li><strong>プッシュ通知（モバイルのみ）：</strong>配信通知を有効にすると（例：「次のエピソードが配信されたら通知する」をタップ）、新しいエピソードが利用可能になった際に通知を送れるよう、Firebase Cloud Messaging がデバイス登録トークンを生成します。通知は言語ごとにまとめた一斉配信として届けられ、トークンはこれらのメッセージを配信する目的にのみ使用されます &mdash; お客様を特定するために使用されることはありません。通知は、デバイスの設定またはゲーム内の設定メニューから、いつでもオフにできます。プッシュ通知は、デスクトップ（Steam）プラットフォームでは使用されません。</li>
+    </ul>
+    <p>本ゲームにアカウントは必要ありません。セーブデータはお使いのデバイス内にローカル保存されます（Steam では Steam Cloud 経由で同期されます）。選択統計は匿名の Firebase 識別子を用いて記録され、その識別子からお客様個人を特定することはできません。</p>
+
+    <h2>3. 収集しないデータ</h2>
+    <ul>
+        <li>トラッキングを目的として、IPアドレスや位置情報を保存・使用することはありません。</li>
+        <li>すべてのプラットフォームにおけるアナリティクスは、匿名かつ集計されたデータに限定されます（第2項を参照）。個々のプレイヤーを特定・追跡するためにアナリティクスを使用することはありません。</li>
+        <li>広告を配信することはありません。</li>
+        <li>お客様の個人データを販売することはなく、広告目的で個人データを共有することもありません。データを共有するのは、第4項に記載した、ゲームの運営に必要なサービスプロバイダーに対してのみです。</li>
+    </ul>
+
+    <h2>4. 第三者サービス</h2>
+    <p>以下の第三者サービスが、当社に代わってデータを処理する場合があります：</p>
+    <ul>
+        <li><strong>Firebase（Google）：</strong>選択統計の紐づけに使用する匿名認証（Firebase Authentication）を提供し、モバイルではエピソード配信の任意のプッシュ通知（Firebase Cloud Messaging）を配信します。<a href="https://firebase.google.com/support/privacy">Google のプライバシーポリシー</a>が適用されます。</li>
+        <li><strong>Supabase：</strong>匿名の Firebase 識別子に紐づく選択統計データを保存します。<a href="https://supabase.com/privacy">Supabase のプライバシーポリシー</a>が適用されます。</li>
+        <li><strong>Unity Gaming Services（Unity Technologies）：</strong>すべてのプラットフォーム（Windows、macOS、Linux、iOS、Android）で、匿名のゲームプレイ分析および診断データ（クラッシュ・パフォーマンスデータ）を収集します。<a href="https://unity.com/legal/privacy-policy">Unity のプライバシーポリシー</a>が適用されます。</li>
+        <li><strong>Google Analytics for Firebase および Firebase Crashlytics：</strong>ゲーム改善に役立てるため、モバイル（iOS および Android）で匿名の利用データとクラッシュデータを収集します。<a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>が適用されます。</li>
+        <li><strong>Steam（Valve）：</strong>プラットフォームのアカウント、購入、Steam Cloud のセーブ同期を扱います。<a href="https://store.steampowered.com/privacy_agreement/">Steam のプライバシーポリシー</a>が適用されます。</li>
+        <li><strong>Apple：</strong>iOS での App Store の購入とアカウントを扱います。<a href="https://www.apple.com/legal/privacy/">Apple のプライバシーポリシー</a>が適用されます。</li>
+        <li><strong>Google Play：</strong>Android での購入とアカウントを扱います。<a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>が適用されます。</li>
+        <li><strong>RevenueCat：</strong>モバイル（iOS および Android）でのアプリ内課金による購入済みコンテンツへのアクセス権を管理します。購入したコンテンツのロック解除と復元のため、アプリが生成したユーザー識別子、購入・取引履歴、デバイス情報を受け取ります。<a href="https://www.revenuecat.com/privacy/">RevenueCat のプライバシーポリシー</a>が適用されます。</li>
+    </ul>
+    <p>いずれのプラットフォームにおいても、当社がお客様の支払い情報にアクセスすることはありません。</p>
+
+    <h2>5. アナリティクスデータの保持期間</h2>
+    <p>
+        匿名のアナリティクスデータは、各プロバイダーの標準的な保持ポリシーに従って保持されます。Unity Gaming Services は最長12か月間、Google Analytics は最長14か月間データを保持します。これらの期間は、各サービスのダッシュボードで調整される場合があります。個々のプレイヤーを特定するためにアナリティクスを使用することはありません。
+    </p>
+
+    <h2>6. データの保存とセキュリティ</h2>
+    <p>
+        選択統計は Supabase に保存されます。匿名認証は Firebase（Google Cloud）が扱います。当社はお客様のデータを保護するため、業界標準のセキュリティ対策を講じています。ただし、インターネット上のいかなる通信方法も100%安全ではありません。
+    </p>
+    <p>
+        当社のサービスプロバイダーの一部（Firebase、Supabase）は、米国を含む日本国外でサーバーを運用しています。本ゲームを利用することにより、お客様は、各プロバイダーの該当するデータ移転に関する保護措置に従って、ご自身のデータがこれらの法域に移転・処理されることに同意するものとします。
+    </p>
+
+    <h2>7. 子どものプライバシー</h2>
+    <p>
+        The Aurora Chronicles は13歳未満の子どもを対象としていません。当社が13歳未満の子どもから個人データを意図的に収集することはありません。子どもが当社に個人データを提供したと思われる場合は、当社までご連絡ください。速やかに削除いたします。
+    </p>
+
+    <h2>8. お客様の権利</h2>
+    <p>お客様はいつでも、次のことができます：</p>
+    <ul>
+        <li>当社が保有する、お客様に関する個人データのコピーを請求する</li>
+        <li>匿名識別子に紐づく選択統計データの削除を請求する</li>
+        <li>アカウントなしでプレイする &mdash; 本ゲームにアカウントは不要で、セーブデータはローカル（または Steam Cloud）に保存されます</li>
+    </ul>
+    <p>ご請求の際は、下記の第10項に記載の連絡先からお問い合わせください。</p>
+
+    <h2>9. 本ポリシーの変更</h2>
+    <p>
+        当社は、本ポリシーを随時更新することがあります。変更は、更新後の施行日とともにこのページに掲載されます。変更後も本ゲームを継続して利用された場合、更新後のポリシーに同意したものとみなされます。
+    </p>
+
+    <h2>10. お問い合わせ</h2>
+    <p>プライバシーに関するご請求やその他のご質問は、サポートページからお問い合わせください：</p>
+    <div class="contact-card">
+        <p><a href="/ja/support">サポートページへ &rarr;</a></p>
+    </div>
+
+  </main>
+
+  <footer class="wrap">
+    <p class="pub"><strong>Entropy</strong> &middot; 日本・東京 &middot; 個人事業主</p>
+    <div class="foot-nav">
+      <a href="/ja/">ホーム</a>
+      <a href="/ja/support">サポート</a>
+      <a href="/ja/privacy-policy">プライバシーポリシー</a>
+      <a href="/ja/privacy-policy/website">Cookie</a>
+      <a href="https://store.steampowered.com/app/4262410/The_Aurora_Chronicles/">Steam</a>
+    </div>
+    <p>&copy; 2025&ndash;2026 Entropy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

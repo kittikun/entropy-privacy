@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--i18n:head-->
+<link rel="canonical" href="https://entropy.kittikun.jp/ja/support/">
+<link rel="alternate" hreflang="en" href="https://entropy.kittikun.jp/support/">
+<link rel="alternate" hreflang="fr" href="https://entropy.kittikun.jp/fr/support/">
+<link rel="alternate" hreflang="ja" href="https://entropy.kittikun.jp/ja/support/">
+<link rel="alternate" hreflang="x-default" href="https://entropy.kittikun.jp/support/">
+<!--/i18n:head-->
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<title>サポート — The Aurora Chronicles</title>
+<meta name="description" content="The Aurora Chronicles のサポート：バグ報告、セーブ・データに関するご請求、Entropy へのお問い合わせ方法をご案内します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#10131a; --panel:#181c26; --panel-2:#1f2430;
+    --border:rgba(255,255,255,.07); --border-strong:rgba(255,255,255,.14);
+    --text:#eceef4; --muted:#878da0; --accent:#64b4ff;
+    --serif:'GFS Didot',Georgia,'Times New Roman',serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{color:#8ecbff}
+  .wrap{max-width:760px; margin:0 auto; padding:0 1.25rem}
+
+  /* HERO */
+  .hero{
+    position:relative; text-align:center; padding:5rem 1.25rem 3rem;
+    background:radial-gradient(ellipse 85% 65% at 50% -8%, rgba(100,180,255,.15), transparent 60%);
+  }
+  .eyebrow{
+    font-size:.7rem; letter-spacing:.34em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:1.4rem;
+  }
+  .eyebrow a{ color:var(--muted); }
+  .eyebrow a:hover{ color:var(--accent); }
+  .hero h1{
+    font-family:var(--serif); font-weight:400; color:#fff;
+    font-size:clamp(2rem,5vw,2.8rem); line-height:1.1;
+  }
+  .hero .tagline{
+    font-family:var(--serif); font-style:italic; color:var(--accent);
+    font-size:clamp(1.05rem,2.6vw,1.3rem); margin-top:1rem;
+  }
+
+  /* SECTIONS */
+  section{ padding:2.8rem 0; border-top:1px solid var(--border); }
+  h2{ font-family:var(--serif); font-size:1.5rem; font-weight:400; color:#fff; margin-bottom:1rem; }
+  p{ color:#c7cbd8; margin-bottom:1rem; }
+  p:last-child{ margin-bottom:0; }
+  strong{ color:#fff; font-weight:600; }
+
+  /* HELP CARDS */
+  .cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:.9rem; }
+  .card{
+    background:var(--panel); border:1px solid var(--border);
+    border-radius:14px; padding:1.25rem 1.3rem;
+  }
+  .card h3{ font-size:1.02rem; font-weight:600; color:#fff; margin-bottom:.4rem; }
+  .card p{ font-size:.92rem; color:#9aa0b2; line-height:1.6; margin:0; }
+  .card p + p{ margin-top:.5rem; }
+
+  /* CONTACT / REVEAL */
+  .contact-box{
+    background:var(--panel); border:1px solid var(--border);
+    border-radius:14px; padding:1.6rem 1.5rem; margin-top:1rem;
+  }
+  .contact-box .cf-turnstile{ margin:.4rem 0 1rem; }
+  #contact-status{ color:var(--muted); font-style:italic; }
+  #contact-email{ font-size:1.1rem; font-weight:600; }
+  #contact-email a{ word-break:break-all; }
+  .hint{ font-size:.88rem; color:var(--muted); margin-top:.9rem; }
+
+  /* FOOTER */
+  footer{ border-top:1px solid var(--border); padding:2.4rem 0 3.4rem; color:var(--muted); font-size:.86rem; }
+  footer .pub{ color:#aab0c2; margin-bottom:.5rem; }
+  footer .pub strong{ color:#fff; font-weight:600; }
+  footer a{ color:var(--muted); }
+  footer a:hover{ color:var(--accent); }
+  .foot-nav{ display:flex; gap:1.2rem; flex-wrap:wrap; margin:.6rem 0 1.2rem; }
+
+  /* i18n language switcher */
+  .hero .topbar{ position:absolute; top:1rem; right:1.1rem; }
+  .lang-inline{ display:inline-flex; align-items:center; gap:.55rem; font-size:.84rem; letter-spacing:.01em; }
+  .lang-inline a{ color:var(--muted); text-decoration:none; padding:.35rem .1rem; transition:color .15s; }
+  .lang-inline a:hover{ color:var(--text); }
+  .lang-inline .active{ color:var(--accent); font-weight:500; }
+  .lang-inline .sep{ color:var(--muted); opacity:.5; }
+  @media (max-width:560px){ .hero .topbar{ position:static; margin-bottom:1rem; } }
+</style>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<!-- Website analytics & consent (Google Consent Mode v2, EEA-gated) -->
+<script src="/consent.js"></script>
+</head>
+<body>
+
+  <header class="hero">
+    <!--i18n:switcher-->
+    <div class="topbar"><nav class="lang-inline" aria-label="Language"><a href="/support/" hreflang="en">English</a><span class="sep">·</span><a href="/fr/support/" hreflang="fr">Français</a><span class="sep">·</span><span class="active" aria-current="true">日本語</span></nav></div>
+    <!--/i18n:switcher-->
+    <div class="eyebrow"><a href="/ja/">The Aurora Chronicles</a></div>
+    <h1>サポート</h1>
+    <p class="tagline">すべてに目を通します。そして、必要なものにはきちんとお返事します。</p>
+  </header>
+
+  <main class="wrap">
+
+    <section>
+      <h2>どのようなご用件ですか？</h2>
+      <p>
+        The Aurora Chronicles は、<strong>Entropy</strong> がたった一人で制作している作品です。サポートチケットの行列も、応答するボットもありません &mdash; あるのはメールだけです。以下のいずれについてでも、お気軽にご連絡ください。実際に人間が読んで返信します。
+      </p>
+      <div class="cards">
+        <div class="card">
+          <h3>バグとクラッシュ</h3>
+          <p>不具合、操作不能（ソフトロック）、起動しないといった問題はありませんか？プラットフォーム（Steam、iOS、Android）、エピソード、そして発生した状況をお知らせください。スクリーンショットやログがあると、とても助かります。</p>
+        </div>
+        <div class="card">
+          <h3>セーブとゲーム進行</h3>
+          <p>ゲームの進行状況はお使いのデバイスにローカル保存され、Steam では Steam Cloud にも同期されます。サーバー側にコピーは保持していないため、削除・破損したローカルセーブは通常、復元できません &mdash; ただし、本来読み込めるはずのセーブが読み込めない場合は、それはバグです。ぜひお知らせください。</p>
+        </div>
+        <div class="card">
+          <h3>お客様のデータとプライバシー</h3>
+          <p>匿名のプレイヤー識別子に紐づくデータのコピーまたは削除を請求できます。当社が保存しているデータとお客様の権利については、<a href="/ja/privacy-policy">プライバシーポリシー</a>をご覧ください。</p>
+        </div>
+        <div class="card">
+          <h3>プレス・ビジネス関連</h3>
+          <p>プレスキット、レビューキー、キュレーターのご依頼、提携に関するお問い合わせは、いずれも下記の同じアドレスで承ります。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>お問い合わせ</h2>
+      <p>
+        スパム対策のため、メールアドレスは簡単な確認の後に表示されます。
+      </p>
+      <div class="contact-box" id="contact-reveal">
+        <div id="turnstile-container"
+             class="cf-turnstile"
+             data-sitekey="0x4AAAAAACmGEzzpC5Ju-RWY"
+             data-theme="dark"
+             data-callback="onTurnstileSuccess"
+             data-error-callback="onTurnstileError">
+        </div>
+        <p id="contact-status">あなたが人間であることを確認しています&hellip;</p>
+        <p id="contact-email" style="display:none;"></p>
+        <p class="hint">数日以内のご返信を目指しています。プラットフォームと分かりやすい説明を添えていただくと、対応がスムーズになります。</p>
+      </div>
+      <noscript>
+        <p>連絡先のメールアドレスを表示するには、JavaScript を有効にしてください。</p>
+      </noscript>
+    </section>
+
+  </main>
+
+  <footer class="wrap">
+    <p class="pub"><strong>Entropy</strong> &middot; 日本・東京 &middot; 個人事業主</p>
+    <div class="foot-nav">
+      <a href="/ja/">ホーム</a>
+      <a href="/ja/support">サポート</a>
+      <a href="/ja/privacy-policy">プライバシーポリシー</a>
+      <a href="/ja/privacy-policy/website">Cookie</a>
+      <a href="https://store.steampowered.com/app/4262410/The_Aurora_Chronicles/">Steam</a>
+    </div>
+    <p>&copy; 2025&ndash;2026 Entropy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function onTurnstileSuccess(token) {
+      var statusEl = document.getElementById("contact-status");
+      statusEl.textContent = "確認できました！連絡先を取得しています\u2026";
+
+      fetch("https://entropy-email-reveal.entropy-06b.workers.dev", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token: token })
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data.success && data.email) {
+          var emailEl = document.getElementById("contact-email");
+          var link = document.createElement("a");
+          link.href = "mailto:" + data.email;
+          link.textContent = data.email;
+          emailEl.appendChild(link);
+          emailEl.style.display = "block";
+          statusEl.style.display = "none";
+          document.getElementById("turnstile-container").style.display = "none";
+        } else {
+          statusEl.textContent = "確認に失敗しました。ページを再読み込みして、もう一度お試しください。";
+        }
+      })
+      .catch(function() {
+        statusEl.textContent = "問題が発生しました。ページを再読み込みして、もう一度お試しください。";
+      });
+    }
+
+    function onTurnstileError() {
+      document.getElementById("contact-status").textContent =
+        "確認中にエラーが発生しました。ページを再読み込みしてください。";
+    }
+  </script>
+
+</body>
+</html>

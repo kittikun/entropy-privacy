@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--i18n:head-->
+<link rel="canonical" href="https://entropy.kittikun.jp/ja/privacy-policy/website/">
+<link rel="alternate" hreflang="en" href="https://entropy.kittikun.jp/privacy-policy/website/">
+<link rel="alternate" hreflang="fr" href="https://entropy.kittikun.jp/fr/privacy-policy/website/">
+<link rel="alternate" hreflang="ja" href="https://entropy.kittikun.jp/ja/privacy-policy/website/">
+<link rel="alternate" hreflang="x-default" href="https://entropy.kittikun.jp/privacy-policy/website/">
+<!--/i18n:head-->
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<title>ウェブサイトのプライバシーとCookie — The Aurora Chronicles</title>
+<meta name="description" content="entropy.kittikun.jp ウェブサイトがアナリティクスとCookieをどのように使用し、どう管理できるかについて説明します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#10131a; --panel:#181c26; --panel-2:#1f2430;
+    --border:rgba(255,255,255,.07); --border-strong:rgba(255,255,255,.14);
+    --text:#eceef4; --muted:#878da0; --accent:#64b4ff;
+    --serif:'GFS Didot',Georgia,'Times New Roman',serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{color:#8ecbff}
+  .wrap{max-width:760px; margin:0 auto; padding:0 1.25rem}
+
+  /* HERO */
+  .hero{
+    position:relative; text-align:center; padding:5rem 1.25rem 3rem;
+    background:radial-gradient(ellipse 85% 65% at 50% -8%, rgba(100,180,255,.15), transparent 60%);
+  }
+  .eyebrow{
+    font-size:.7rem; letter-spacing:.34em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:1.4rem;
+  }
+  .eyebrow a{ color:var(--muted); }
+  .eyebrow a:hover{ color:var(--accent); }
+  .hero h1{
+    font-family:var(--serif); font-weight:400; color:#fff;
+    font-size:clamp(2rem,5vw,2.8rem); line-height:1.1;
+  }
+  .hero .subtitle{ color:#aeb4c4; margin-top:.8rem; font-size:1.02rem; }
+  .hero .effective{ color:var(--muted); font-size:.9rem; margin-top:.6rem; }
+
+  /* BODY */
+  main{ padding-bottom:1rem; }
+  h2{ font-family:var(--serif); font-size:1.4rem; font-weight:400; color:#fff;
+    margin-top:2.6rem; margin-bottom:.9rem; padding-bottom:.3rem; border-bottom:1px solid var(--border); }
+  p{ color:#c7cbd8; margin-bottom:1rem; }
+  ul{ margin:0 0 1rem 1.4rem; color:#c7cbd8; }
+  li{ margin-bottom:.45rem; }
+  strong{ color:#fff; font-weight:600; }
+  code{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.86em;
+    background:var(--panel-2); padding:.1rem .38rem; border-radius:5px; color:#cdd3e1; }
+
+  .contact-card{
+    background:var(--panel); border:1px solid var(--border);
+    border-radius:14px; padding:1.4rem 1.5rem; margin-top:.4rem;
+  }
+  .contact-card p{ margin:0; color:#c7cbd8; }
+  .contact-card p + p{ margin-top:.6rem; }
+
+  .manage-btn{
+    font:inherit; font-size:.92rem; font-weight:500; cursor:pointer; border-radius:9px;
+    padding:.55rem 1.15rem; background:var(--accent); color:#0a1422; border:1px solid var(--accent);
+    transition:background .15s;
+  }
+  .manage-btn:hover{ background:#7cc2ff; }
+
+  /* FOOTER */
+  footer{ border-top:1px solid var(--border); padding:2.4rem 0 3.4rem; color:var(--muted); font-size:.86rem; margin-top:2.6rem; }
+  footer .pub{ color:#aab0c2; margin-bottom:.5rem; }
+  footer .pub strong{ color:#fff; font-weight:600; }
+  footer a{ color:var(--muted); }
+  footer a:hover{ color:var(--accent); }
+  .foot-nav{ display:flex; gap:1.2rem; flex-wrap:wrap; margin:.6rem 0 1.2rem; }
+
+  /* i18n language switcher */
+  .hero .topbar{ position:absolute; top:1rem; right:1.1rem; }
+  .lang-inline{ display:inline-flex; align-items:center; gap:.55rem; font-size:.84rem; letter-spacing:.01em; }
+  .lang-inline a{ color:var(--muted); text-decoration:none; padding:.35rem .1rem; transition:color .15s; }
+  .lang-inline a:hover{ color:var(--text); }
+  .lang-inline .active{ color:var(--accent); font-weight:500; }
+  .lang-inline .sep{ color:var(--muted); opacity:.5; }
+  @media (max-width:560px){ .hero .topbar{ position:static; margin-bottom:1rem; } }
+</style>
+<script src="/consent.js"></script>
+</head>
+<body>
+
+  <header class="hero">
+    <!--i18n:switcher-->
+    <div class="topbar"><nav class="lang-inline" aria-label="Language"><a href="/privacy-policy/website/" hreflang="en">English</a><span class="sep">·</span><a href="/fr/privacy-policy/website/" hreflang="fr">Français</a><span class="sep">·</span><span class="active" aria-current="true">日本語</span></nav></div>
+    <!--/i18n:switcher-->
+    <div class="eyebrow"><a href="/ja/">The Aurora Chronicles</a></div>
+    <h1>ウェブサイトのプライバシーとCookie</h1>
+    <p class="subtitle">entropy.kittikun.jp &mdash; Entropy 提供</p>
+    <p class="effective">施行日：2026年6月4日</p>
+  </header>
+
+  <main class="wrap">
+
+    <h2>1. このページの対象範囲</h2>
+    <p>
+        この通知は、<strong>entropy.kittikun.jp</strong> ウェブサイトがアナリティクスとCookieをどのように扱うかを説明するものです。Steam、iOS、Android 上の The Aurora Chronicles 内で収集されるデータを対象とする<a href="/ja/privacy-policy">ゲームのプライバシーポリシー</a>とは別のものです。
+    </p>
+
+    <h2>2. 使用しているアナリティクス</h2>
+    <p>
+        当サイトでは <strong>Google Analytics 4</strong> を使用し、このウェブサイトを訪れる人数や流入元を把握しています &mdash; たとえば、総訪問数、閲覧されたページ、参照元のサイトや検索、おおよその所在地（国または地域）などです。これにより、どの告知やチャンネルが人々に届いているかを確認できます。
+    </p>
+    <p>
+        これらは集計データとしてのみ利用します。広告プロファイルの作成は行わず、広告も表示せず、このデータを広告目的で販売・共有することもありません。広告関連およびパーソナライゼーションの信号は無効化しています。
+    </p>
+
+    <h2>3. Cookie</h2>
+    <p>
+        アナリティクスが有効な場合、Google Analytics はファーストパーティCookie（<code>_ga</code> および <code>_ga_&lt;id&gt;</code> という名前）を設定します。これらにはランダムに生成された識別子が含まれ、再訪問と新規訪問を区別するために使われます。これらのCookieに、お客様の名前やメールアドレス、入力した内容が含まれることはありません。Cookieは自動的に（最長で約2年後に）期限切れとなり、ブラウザでいつでも削除できます。
+    </p>
+    <p>
+        アナリティクスが有効になるまで、アナリティクス用のCookieは設定されません（第4項を参照）。Google Analytics 4 は、お客様のIPアドレスをそのままの形で保存することはありません。
+    </p>
+
+    <h2>4. 同意とその変更方法</h2>
+    <p>
+        EU、EEA、英国、またはスイスからアクセスした場合、Cookieバナーで「同意する」を選択するまで、アナリティクスは無効のままです。拒否した場合、アナリティクス用のCookieは設定されず、サイトは通常どおり動作します。それ以外の地域からの訪問者については、現地の法律で認められる範囲で、アナリティクスがデフォルトで有効になっています。
+    </p>
+    <p>選択はいつでも変更できます：</p>
+    <p><button class="manage-btn" type="button" onclick="ecConsentReset()">Cookieの選択を確認する</button></p>
+    <p>また、ブラウザで当サイトのCookieとサイトデータを削除すると、バナーがリセットされます。</p>
+
+    <h2>5. 埋め込み動画</h2>
+    <p>
+        エピソードのトレーラーは、プライバシー強化モードの <code>youtube-nocookie.com</code> を使って YouTube から埋め込んでいます。プレーヤーはクリックを待たずにページとともに読み込まれるため、トレーラーが画面に表示されると、ブラウザは YouTube（Google）と通信します &mdash; ただしこのモードでは、実際に動画を再生するまで YouTube はCookieを設定しません。再生すると、YouTube が独自のCookieを設定する場合があります。その再生については、<a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>が適用されます。
+    </p>
+
+    <h2>6. データの送信先</h2>
+    <p>
+        ウェブサイトのアナリティクスは Google（Google Analytics）によって処理されます。データは、Google の該当するデータ移転に関する保護措置に従い、日本国外および EEA 域外（米国を含む）の Google のサーバーに移転・処理される場合があります。Google Analytics のデータは最長14か月間保持されます。
+    </p>
+
+    <h2>7. お問い合わせ</h2>
+    <p>この通知に関するご質問は、サポートページからお問い合わせください：</p>
+    <div class="contact-card">
+        <p><a href="/ja/support">サポートページへ &rarr;</a></p>
+    </div>
+
+  </main>
+
+  <footer class="wrap">
+    <p class="pub"><strong>Entropy</strong> &middot; 日本・東京 &middot; 個人事業主</p>
+    <div class="foot-nav">
+      <a href="/ja/">ホーム</a>
+      <a href="/ja/support">サポート</a>
+      <a href="/ja/privacy-policy">プライバシーポリシー</a>
+      <a href="/ja/privacy-policy/website">Cookie</a>
+      <a href="https://store.steampowered.com/app/4262410/The_Aurora_Chronicles/">Steam</a>
+    </div>
+    <p>&copy; 2025&ndash;2026 Entropy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

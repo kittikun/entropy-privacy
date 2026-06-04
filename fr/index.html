@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--i18n:head-->
+<link rel="canonical" href="https://entropy.kittikun.jp/fr/">
+<link rel="alternate" hreflang="en" href="https://entropy.kittikun.jp/">
+<link rel="alternate" hreflang="fr" href="https://entropy.kittikun.jp/fr/">
+<link rel="alternate" hreflang="ja" href="https://entropy.kittikun.jp/ja/">
+<link rel="alternate" hreflang="x-default" href="https://entropy.kittikun.jp/">
+<!--/i18n:head-->
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<title>The Aurora Chronicles — Visual novel SF et mystère</title>
+<meta name="description" content="L'optimisme peut-il survivre à la vérité&#8239;? Visual novel SF épisodique. Vos choix façonnent l'équipage, et la vérité.">
+
+<!-- Open Graph / Twitter Card -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Aurora Chronicles">
+<meta property="og:title" content="The Aurora Chronicles — Visual novel SF et mystère">
+<meta property="og:description" content="L'optimisme peut-il survivre à la vérité&#8239;? Visual novel SF épisodique. Vos choix façonnent l'équipage, et la vérité.">
+<meta property="og:url" content="https://entropy.kittikun.jp/fr/">
+<meta property="og:image" content="https://entropy.kittikun.jp/assets/capsule.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@entropy_42_">
+<meta name="twitter:title" content="The Aurora Chronicles — Visual novel SF et mystère">
+<meta name="twitter:description" content="L'optimisme peut-il survivre à la vérité&#8239;? Visual novel SF épisodique. Vos choix façonnent l'équipage, et la vérité.">
+<meta name="twitter:image" content="https://entropy.kittikun.jp/assets/capsule.jpg">
+
+<!-- Structured data: VideoGame -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "The Aurora Chronicles",
+  "description": "Visual novel SF épisodique. Vos choix façonnent l'équipage, et la vérité.",
+  "url": "https://entropy.kittikun.jp/fr/",
+  "image": "https://entropy.kittikun.jp/assets/capsule.jpg",
+  "genre": ["Visual Novel", "Science Fiction", "Mystery", "Adventure"],
+  "gamePlatform": ["PC", "macOS", "Linux", "iOS", "Android"],
+  "author": { "@type": "Person", "name": "kittikun" },
+  "publisher": { "@type": "Organization", "name": "Entropy" },
+  "sameAs": [
+    "https://store.steampowered.com/app/4262410/The_Aurora_Chronicles/",
+    "https://entropy-42.itch.io/the-aurora-chronicles-demo",
+    "https://x.com/entropy_42_",
+    "https://www.youtube.com/@entropy_42",
+    "https://aurorachronicles.bandcamp.com/"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#10131a; --panel:#181c26; --panel-2:#1f2430;
+    --border:rgba(255,255,255,.07); --border-strong:rgba(255,255,255,.14);
+    --text:#eceef4; --muted:#878da0; --accent:#64b4ff;
+    --serif:'GFS Didot',Georgia,'Times New Roman',serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{color:#8ecbff}
+  .wrap{max-width:920px; margin:0 auto; padding:0 1.25rem}
+
+  /* HERO */
+  .hero{
+    position:relative; text-align:center; padding:6.5rem 1.25rem 4.5rem;
+    background:radial-gradient(ellipse 85% 65% at 50% -8%, rgba(100,180,255,.15), transparent 60%);
+  }
+  .eyebrow{
+    font-size:.7rem; letter-spacing:.34em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:1.8rem;
+  }
+  .wordmark-svg{ max-width:560px; margin:0 auto; }
+  .wordmark-svg svg{ width:100%; height:auto; display:block; }
+  .logline{
+    font-family:var(--serif); font-style:italic; color:var(--accent);
+    font-size:clamp(1.3rem,3.2vw,1.9rem); margin-top:1.6rem; letter-spacing:.01em;
+  }
+  .descriptor{ color:#aeb4c4; margin-top:.7rem; font-size:1.02rem; }
+
+  .status-pill{
+    display:inline-flex; align-items:center; gap:.5rem; margin-top:1.9rem;
+    padding:.4rem .9rem; background:rgba(100,180,255,.08);
+    border:1px solid rgba(100,180,255,.25); border-radius:999px;
+    font-size:.82rem; color:#bcd9ff; letter-spacing:.02em;
+  }
+  .status-pill .dot{ width:7px;height:7px;border-radius:50%;background:var(--accent); }
+
+  .cta-row{ margin-top:2.1rem; display:flex; flex-direction:column; align-items:center; gap:.7rem; }
+  .btn-steam{
+    display:inline-flex; align-items:center; gap:.7rem; padding:.85rem 1.7rem;
+    border-radius:10px; font-weight:500; font-size:1rem;
+    background:var(--accent); color:#0a1422; border:1px solid var(--accent);
+    transition:background .15s,transform .05s;
+  }
+  .btn-steam:hover{ background:#7cc2ff; color:#0a1422; }
+  .btn-steam:active{ transform:translateY(1px); }
+  .btn-steam svg{ width:22px;height:22px; }
+  .btn-itch{
+    display:inline-flex; align-items:center; gap:.6rem; padding:.7rem 1.45rem;
+    border-radius:10px; font-weight:500; font-size:.95rem;
+    background:var(--panel); color:var(--text); border:1px solid var(--border-strong);
+    transition:background .15s,border-color .15s,transform .05s;
+  }
+  .btn-itch:hover{ background:var(--panel-2); border-color:var(--accent); color:#fff; }
+  .btn-itch:active{ transform:translateY(1px); }
+  .btn-itch svg{ width:20px;height:20px; fill:currentColor; }
+  .free-note{ font-size:.85rem; color:var(--muted); }
+  .steam-note{ font-size:.78rem; color:var(--muted); margin-top:-.35rem; letter-spacing:.01em; }
+
+  /* SECTIONS */
+  section{ padding:3.4rem 0; border-top:1px solid var(--border); }
+  h2{ font-family:var(--serif); font-size:1.7rem; font-weight:400; color:#fff; margin-bottom:1.1rem; }
+  .lead p{ color:#c7cbd8; font-size:1.05rem; margin-bottom:1rem; }
+  .lead p:last-child{ margin-bottom:0; }
+  .lead strong{ color:#fff; font-weight:600; }
+
+  /* PILLARS */
+  .pillars{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:.9rem; }
+  .pillar{
+    background:var(--panel); border:1px solid var(--border);
+    border-radius:14px; padding:1.3rem 1.35rem;
+  }
+  .pillar .ico{
+    width:38px;height:38px;border-radius:9px; display:flex;align-items:center;justify-content:center;
+    background:rgba(100,180,255,.10); border:1px solid rgba(100,180,255,.22); margin-bottom:.9rem;
+  }
+  .pillar .ico svg{ width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.7; }
+  .pillar h3{ font-size:1.02rem; font-weight:600; color:#fff; margin-bottom:.35rem; }
+  .pillar p{ font-size:.92rem; color:#9aa0b2; line-height:1.6; }
+
+  /* EPISODES */
+  .ep-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:1.1rem; }
+  .ep-card{ background:var(--panel); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+  .ep-card iframe{ width:100%; aspect-ratio:16/9; display:block; border:0; }
+  .ep-meta{ display:flex; align-items:center; gap:.8rem; padding:.85rem 1.1rem; }
+  .ep-meta .no{ font-size:.76rem; color:var(--muted); letter-spacing:.06em; font-variant-numeric:tabular-nums; }
+  .ep-meta .ttl{ font-weight:600; color:#fff; flex:1; font-size:1.02rem; }
+  .ep-meta .tag{ font-size:.7rem; letter-spacing:.06em; text-transform:uppercase; color:#9fd3a7;
+    background:rgba(120,200,140,.10); border:1px solid rgba(120,200,140,.22); padding:.18rem .55rem; border-radius:6px; }
+
+  /* LINKS */
+  .links{ display:flex; flex-wrap:wrap; gap:.7rem; }
+  .lnk{ display:inline-flex; align-items:center; gap:.6rem; padding:.7rem 1.05rem; border-radius:10px;
+    background:var(--panel); border:1px solid var(--border); color:var(--text); font-size:.92rem; font-weight:500;
+    transition:border-color .15s,background .15s; }
+  .lnk:hover{ background:var(--panel-2); border-color:var(--border-strong); color:#fff; }
+  .lnk svg{ width:18px;height:18px; fill:currentColor; }
+
+  /* SOLO NOTE */
+  .solo{ text-align:center; color:var(--muted); font-size:.95rem; font-style:italic; font-family:var(--serif); }
+
+  /* FOOTER */
+  footer{ border-top:1px solid var(--border); padding:2.4rem 0 3.4rem; color:var(--muted); font-size:.86rem; }
+  footer .pub{ color:#aab0c2; margin-bottom:.5rem; }
+  footer .pub strong{ color:#fff; font-weight:600; }
+  footer a{ color:var(--muted); }
+  footer a:hover{ color:var(--accent); }
+  .foot-nav{ display:flex; gap:1.2rem; flex-wrap:wrap; margin:.6rem 0 1.2rem; }
+
+  /* i18n language switcher */
+  .hero .topbar{ position:absolute; top:1rem; right:1.1rem; }
+  .lang-inline{ display:inline-flex; align-items:center; gap:.55rem; font-size:.84rem; letter-spacing:.01em; }
+  .lang-inline a{ color:var(--muted); text-decoration:none; padding:.35rem .1rem; transition:color .15s; }
+  .lang-inline a:hover{ color:var(--text); }
+  .lang-inline .active{ color:var(--accent); font-weight:500; }
+  .lang-inline .sep{ color:var(--muted); opacity:.5; }
+  @media (max-width:560px){ .hero .topbar{ position:static; margin-bottom:1rem; } }
+</style>
+<!-- Website analytics & consent (Google Consent Mode v2, EEA-gated) -->
+<script src="/consent.js"></script>
+</head>
+<body>
+
+  <header class="hero">
+    <!--i18n:switcher-->
+    <div class="topbar"><nav class="lang-inline" aria-label="Language"><a href="/" hreflang="en">English</a><span class="sep">·</span><span class="active" aria-current="true">Français</span><span class="sep">·</span><a href="/ja/" hreflang="ja">日本語</a></nav></div>
+    <!--/i18n:switcher-->
+    <div class="eyebrow">Entropy présente</div>
+    <div class="wordmark-svg" role="img" aria-label="The Aurora Chronicles">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13424 974">
+        <g fill="#eceef4">
+          <path d="M642 689 644 486H614Q608 570 569.0 610.5Q530 651 432 656L386 658V31H480V0H202V31H295V658L250 656Q153 652 114.5 613.5Q76 575 67 486H38L40 689Z" transform="translate(0, 703) scale(1, -1)"/>
+          <path d="M718 31V0H440V31H534V345H227V31H320V0H44V31H138V658H44V689H320V658H227V380H534V658H440V689H718V658H625V31Z" transform="translate(668, 703) scale(1, -1)"/>
+          <path d="M611 239H643L632 0H51V31H145V658H51V689H616L618 486H587Q580 573 539.0 613.5Q498 654 405 656L234 658V368H356Q399 368 420 393Q443 425 443 486H474V209H443Q443 268 418.5 301.0Q394 334 356 334H234V31L421 34Q449 34 488.5 49.0Q528 64 547 83Q607 139 611 239Z" transform="translate(1426, 703) scale(1, -1)"/>
+          <path d="M725 31V0H465V31H545L477 228H236L198 138Q180 92 180.0 70.5Q180 49 186.0 40.0Q192 31 249 31V0H31V31Q83 30 106.5 44.5Q130 59 158 138L375 708H415L651 31ZM250 266H463L364 559Z" transform="translate(2476, 703) scale(1, -1)"/>
+          <path d="M723 692V661Q664 661 654 651Q629 626 629 573V279Q629 119 574.0 52.0Q519 -15 373 -15Q255 -15 189.5 56.5Q124 128 124 219V661H32V692H307V661H213V223Q213 15 402 15Q596 15 596 247V573Q596 628 570 652Q560 661 503 661V692Z" transform="translate(3224, 703) scale(1, -1)"/>
+          <path d="M469 54 278 327H217L219 31H312V0H34V31H127V658H34V689H337Q458 689 521.0 641.0Q584 593 584.0 513.0Q584 433 528 383Q474 338 386 332L591 54Q607 34 662 29V-1Q589 2 431 -1L432 31H460Q474 34 474.0 41.5Q474 49 469 54ZM304 356Q486 356 482 513Q478 658 325 658H219L217 356Z" transform="translate(3971, 703) scale(1, -1)"/>
+          <path d="M581 607Q663 509 663.0 350.5Q663 192 577.0 89.0Q491 -14 362.5 -14.0Q234 -14 142 91Q52 197 54.0 352.5Q56 508 142.5 607.5Q229 707 364.5 707.0Q500 707 581 607ZM363 21Q456 21 504.0 110.0Q552 199 552.0 346.5Q552 494 510 578Q460 676 356.5 676.0Q253 676 205 583Q165 504 165 347Q165 21 363 21Z" transform="translate(4629, 703) scale(1, -1)"/>
+          <path d="M469 54 278 327H217L219 31H312V0H34V31H127V658H34V689H337Q458 689 521.0 641.0Q584 593 584.0 513.0Q584 433 528 383Q474 338 386 332L591 54Q607 34 662 29V-1Q589 2 431 -1L432 31H460Q474 34 474.0 41.5Q474 49 469 54ZM304 356Q486 356 482 513Q478 658 325 658H219L217 356Z" transform="translate(5347, 703) scale(1, -1)"/>
+          <path d="M725 31V0H465V31H545L477 228H236L198 138Q180 92 180.0 70.5Q180 49 186.0 40.0Q192 31 249 31V0H31V31Q83 30 106.5 44.5Q130 59 158 138L375 708H415L651 31ZM250 266H463L364 559Z" transform="translate(6005, 703) scale(1, -1)"/>
+          <path d="M585 128 599 112Q546 38 486.0 11.0Q426 -16 339 -16Q211 -16 121 89Q31 196 32.5 351.5Q34 507 122.0 605.5Q210 704 339 704Q421 704 458.0 696.5Q495 689 547 669V512H517Q510 600 470.0 639.5Q430 679 342 675Q148 666 148 344Q148 202 198 111Q250 21 334.0 19.5Q418 18 472.0 43.5Q526 69 585 128Z" transform="translate(7105, 703) scale(1, -1)"/>
+          <path d="M718 31V0H440V31H534V345H227V31H320V0H44V31H138V658H44V689H320V658H227V380H534V658H440V689H718V658H625V31Z" transform="translate(7713, 703) scale(1, -1)"/>
+          <path d="M469 54 278 327H217L219 31H312V0H34V31H127V658H34V689H337Q458 689 521.0 641.0Q584 593 584.0 513.0Q584 433 528 383Q474 338 386 332L591 54Q607 34 662 29V-1Q589 2 431 -1L432 31H460Q474 34 474.0 41.5Q474 49 469 54ZM304 356Q486 356 482 513Q478 658 325 658H219L217 356Z" transform="translate(8471, 703) scale(1, -1)"/>
+          <path d="M581 607Q663 509 663.0 350.5Q663 192 577.0 89.0Q491 -14 362.5 -14.0Q234 -14 142 91Q52 197 54.0 352.5Q56 508 142.5 607.5Q229 707 364.5 707.0Q500 707 581 607ZM363 21Q456 21 504.0 110.0Q552 199 552.0 346.5Q552 494 510 578Q460 676 356.5 676.0Q253 676 205 583Q165 504 165 347Q165 21 363 21Z" transform="translate(9129, 703) scale(1, -1)"/>
+          <path d="M708 689V658Q650 658 640 648Q614 622 614 571L616 -17H593L170 635V117Q170 65 195 41Q205 31 263 31V0H42V31Q98 31 108 40Q136 64 136 117V635Q133 658 106 658H50V689H250L581 174V571Q581 622 553 649Q542 658 487 658V689Z" transform="translate(9847, 703) scale(1, -1)"/>
+          <path d="M335 31V0H49V31H143V658H49V689H335V658H242V31Z" transform="translate(10580, 703) scale(1, -1)"/>
+          <path d="M585 128 599 112Q546 38 486.0 11.0Q426 -16 339 -16Q211 -16 121 89Q31 196 32.5 351.5Q34 507 122.0 605.5Q210 704 339 704Q421 704 458.0 696.5Q495 689 547 669V512H517Q510 600 470.0 639.5Q430 679 342 675Q148 666 148 344Q148 202 198 111Q250 21 334.0 19.5Q418 18 472.0 43.5Q526 69 585 128Z" transform="translate(10960, 703) scale(1, -1)"/>
+          <path d="M570 239H602L589 0H44V31H138V658H44V689H321V658H227V31L380 34Q407 34 447.0 49.0Q487 64 506 83Q566 139 570 239Z" transform="translate(11568, 703) scale(1, -1)"/>
+          <path d="M611 239H643L632 0H51V31H145V658H51V689H616L618 486H587Q580 573 539.0 613.5Q498 654 405 656L234 658V368H356Q399 368 420 393Q443 425 443 486H474V209H443Q443 268 418.5 301.0Q394 334 356 334H234V31L421 34Q449 34 488.5 49.0Q528 64 547 83Q607 139 611 239Z" transform="translate(12213, 703) scale(1, -1)"/>
+          <path d="M491 220Q491 104 398 43Q318 -10 197 -10Q124 -10 34 24L35 183H65Q71 104 112 69Q131 53 168.0 42.0Q205 31 235 32Q304 33 356 69Q407 106 409 168Q409 233 363.5 272.0Q318 311 238 320Q25 346 25 498Q25 604 106 659Q175 707 274 707Q303 707 343.0 698.5Q383 690 394.5 690.0Q406 690 410 705H438V526H408Q401 600 363.5 633.0Q326 666 252 665Q106 663 108 534Q110 419 268 403Q491 379 491 220Z" transform="translate(12911, 703) scale(1, -1)"/>
+        </g>
+      </svg>
+    </div>
+    <p class="logline">L'optimisme peut-il survivre à la vérité&#8239;?</p>
+    <p class="descriptor">Visual novel SF épisodique. Vos choix façonnent l'équipage, et la vérité.</p>
+
+    <div class="status-pill"><span class="dot"></span> Accès anticipé &middot; Épisodes 1 &amp; 2 disponibles</div>
+
+    <div class="cta-row">
+      <a class="btn-steam" href="https://store.steampowered.com/app/4262410/The_Aurora_Chronicles/">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.98 0C5.67 0 .53 4.87.05 11.05l6.43 2.66a3.4 3.4 0 0 1 1.92-.59l2.86-4.15v-.06a4.54 4.54 0 1 1 4.54 4.55h-.1l-4.09 2.92c0 .05 0 .1.01.15a3.42 3.42 0 1 1-6.8-.36L.05 14.6A12 12 0 1 0 11.98 0zM7.54 18.21l-1.47-.61a2.57 2.57 0 0 0 1.33 1.26 2.56 2.56 0 0 0 3.34-1.38 2.56 2.56 0 0 0 0-1.96 2.56 2.56 0 0 0-1.39-1.39 2.55 2.55 0 0 0-1.94-.03l1.52.63a1.89 1.89 0 1 1-1.45 3.48zm10.61-7.83a3.03 3.03 0 0 0-3.02-3.02 3.03 3.03 0 0 0-3.02 3.02 3.03 3.03 0 0 0 3.02 3.02 3.03 3.03 0 0 0 3.02-3.02zm-5.29 0a2.28 2.28 0 0 1 2.27-2.27 2.28 2.28 0 0 1 2.28 2.27 2.28 2.28 0 0 1-2.28 2.28 2.28 2.28 0 0 1-2.27-2.28z"/></svg>
+        Disponible sur Steam
+      </a>
+      <span class="steam-note">Windows &middot; macOS &middot; Linux &middot; démo gratuite sur Steam</span>
+      <a class="btn-itch" href="https://entropy-42.itch.io/the-aurora-chronicles-demo">
+        <svg viewBox="0 0 512 512" fill="currentColor"><path d="M71.92 34.77C50.2 47.67 7.4 96.84 7 109.73v21.34c0 27.06 25.29 50.84 48.25 50.84 27.57 0 50.54-22.85 50.54-50 0 27.12 22.18 50 49.76 50s49-22.85 49-50c0 27.12 23.59 50 51.16 50h.5c27.57 0 51.16-22.85 51.16-50 0 27.12 21.47 50 49 50s49.76-22.85 49.76-50c0 27.12 23 50 50.54 50 23 0 48.25-23.78 48.25-50.84v-21.34c-.4-12.9-43.2-62.07-64.92-75C372.56 32.4 325.76 32 256 32S91.14 33.1 71.92 34.77zm132.32 134.39c-22 38.4-77.9 38.71-99.85.25-13.17 23.14-43.17 32.07-56 27.66-3.87 40.15-13.67 237.13 17.73 269.15 80 18.67 302.08 18.12 379.76 0 31.65-32.27 21.32-232 17.75-269.15-12.92 4.44-42.88-4.6-56-27.66-22 38.52-77.85 38.1-99.85-.24-7.1 12.49-23.05 28.94-51.76 28.94a57.54 57.54 0 0 1-51.75-28.94zm-41.58 53.77c16.47 0 31.09 0 49.22 19.78a436.91 436.91 0 0 1 88.18 0C318.22 223 332.85 223 349.31 223c52.33 0 65.22 77.53 83.87 144.45 17.26 62.15-5.52 63.67-33.95 63.73-42.15-1.57-65.49-32.18-65.49-62.79-39.25 6.43-101.93 8.79-155.55 0 0 30.61-23.34 61.22-65.49 62.79-28.42-.06-51.2-1.58-33.94-63.73 18.67-67 31.56-144.45 83.88-144.45zM256 270.79s-44.38 40.77-52.35 55.21l29-1.17v25.32c0 1.55 21.34.16 23.33.16 11.65.54 23.31 1 23.31-.16v-25.28l29 1.17c-8-14.48-52.35-55.24-52.35-55.24z"/></svg>
+        Jouer à la démo gratuite
+      </a>
+      <span class="free-note">Démo gratuite sur itch.io &middot; Windows &middot; sans compte Steam</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="lead">
+      <h2>La frontière n'est pas ce qu'elle paraît</h2>
+      <p>
+        Vous êtes le Commandant du <strong>FRV Aurora</strong>, un vaisseau d'intervention frontalière envoyé pour enquêter sur des incidents survenus aux confins de l'expansion humaine. L'Alliance terrestre unifiée a bâti une utopie&#8239;: 150 ans de paix, de coopération et d'exploration.
+      </p>
+      <p>
+        Mais quelque chose ne va pas à la frontière. Et plus vous enquêtez, moins vous êtes sûr[e] de quoi que ce soit.
+      </p>
+    </section>
+
+    <section>
+      <h2>Au programme</h2>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><path d="M16 6a3 3 0 0 1 0 6"/><path d="M19 20c0-2-1-3.5-3-4.2"/></svg></div>
+          <h3>Votre équipage, vos choix</h3>
+          <p>Quatre spécialistes, quatre points de vue. Chaque décision façonne vos relations avec Kira, Marcus, Amara et Jax, et ce qu'ils accepteront de vous confier.</p>
+        </div>
+        <div class="pillar">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="2.5"/></svg></div>
+          <h3>Entre X-Files et Star Trek</h3>
+          <p>Enquêtez sur des phénomènes impossibles dans un futur optimiste pour l'humanité. Chaque affaire remet en question ce qui est censé exister.</p>
+        </div>
+        <div class="pillar">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M9 4v16"/></svg></div>
+          <h3>Mystère épisodique</h3>
+          <p>Chaque épisode est une enquête complète qui prépare le terrain pour quelque chose de plus grand. Jouez-les un par un, ou dévorez la saison entière.</p>
+        </div>
+        <div class="pillar">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h3l3-7 4 18 3-11h5"/></svg></div>
+          <h3>Entièrement doublé</h3>
+          <p>Chaque personnage prend vie grâce à un doublage anglais intégral et une bande-son atmosphérique originale.</p>
+        </div>
+        <div class="pillar">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="14" r="2.5"/><path d="M6 8.5v7M8 6h4a4 4 0 0 1 4 4v1.5"/></svg></div>
+          <h3>Fins multiples</h3>
+          <p>Votre philosophie compte. La fin à laquelle vous parvenez reflète non seulement vos choix, mais aussi votre vision du monde.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Épisodes</h2>
+      <div class="ep-grid">
+        <div class="ep-card">
+          <iframe src="https://www.youtube-nocookie.com/embed/ctyiPibf2ZE?rel=0" title="Première lumière &mdash; bande-annonce" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="ep-meta"><span class="no">EP 01</span><span class="ttl">Première lumière</span><span class="tag">Disponible</span></div>
+        </div>
+        <div class="ep-card">
+          <iframe src="https://www.youtube-nocookie.com/embed/2EQVswjVR_4?rel=0" title="Le Jardin &mdash; bande-annonce" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="ep-meta"><span class="no">EP 02</span><span class="ttl">Le Jardin</span><span class="tag">Disponible</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="solo">24 épisodes prévus. Créé par une seule personne qui voulait jouer à ce jeu et ne le trouvait nulle part.</p>
+    </section>
+
+    <section>
+      <h2>Suivez l'aventure</h2>
+      <div class="links">
+        <a class="lnk" href="https://x.com/entropy_42_">
+          <svg viewBox="0 0 24 24"><path d="M18.9 1.6h3.4l-7.4 8.5L23.7 22h-6.8l-5.3-7-6.1 7H2.1l7.9-9.1L.7 1.6h7l4.8 6.4 5.6-6.4zm-1.2 18.4h1.9L7 3.5H5l12.7 16.5z"/></svg>
+          X / Twitter
+        </a>
+        <a class="lnk" href="https://www.youtube.com/@entropy_42">
+          <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+          YouTube
+        </a>
+        <a class="lnk" href="https://aurorachronicles.bandcamp.com/">
+          <svg viewBox="0 0 24 24"><path d="M0 18.75l7.437-13.5H24l-7.437 13.5H0z"/></svg>
+          Bandcamp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap">
+    <p class="pub"><strong>Entropy</strong> &middot; Tokyo, Japon &middot; 個人事業主</p>
+    <div class="foot-nav">
+      <a href="/fr/">Accueil</a>
+      <a href="/fr/support">Support</a>
+      <a href="/fr/privacy-policy">Confidentialité</a>
+      <a href="/fr/privacy-policy/website">Cookies</a>
+      <a href="https://store.steampowered.com/app/4262410/The_Aurora_Chronicles/">Steam</a>
+    </div>
+    <p>&copy; 2025&ndash;2026 Entropy. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
