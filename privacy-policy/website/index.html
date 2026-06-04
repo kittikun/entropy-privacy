@@ -82,12 +82,23 @@
   footer a{ color:var(--muted); }
   footer a:hover{ color:var(--accent); }
   .foot-nav{ display:flex; gap:1.2rem; flex-wrap:wrap; margin:.6rem 0 1.2rem; }
+  /* i18n language switcher */
+  .hero .topbar{ position:absolute; top:1rem; right:1.1rem; }
+  .lang-inline{ display:inline-flex; align-items:center; gap:.55rem; font-size:.84rem; letter-spacing:.01em; }
+  .lang-inline a{ color:var(--muted); text-decoration:none; padding:.35rem .1rem; transition:color .15s; }
+  .lang-inline a:hover{ color:var(--text); }
+  .lang-inline .active{ color:var(--accent); font-weight:500; }
+  .lang-inline .sep{ color:var(--muted); opacity:.5; }
+  @media (max-width:560px){ .hero .topbar{ position:static; margin-bottom:1rem; } }
 </style>
 <script src="/consent.js"></script>
 </head>
 <body>
 
   <header class="hero">
+    <!--i18n:switcher-->
+    <div class="topbar"><nav class="lang-inline" aria-label="Language"><span class="active" aria-current="true">English</span><span class="sep">·</span><a href="/fr/privacy-policy/website/" hreflang="fr">Français</a><span class="sep">·</span><a href="/ja/privacy-policy/website/" hreflang="ja">日本語</a></nav></div>
+    <!--/i18n:switcher-->
     <div class="eyebrow"><a href="/">The Aurora Chronicles</a></div>
     <h1>Website Privacy &amp; Cookies</h1>
     <p class="subtitle">entropy.kittikun.jp &mdash; by Entropy</p>
