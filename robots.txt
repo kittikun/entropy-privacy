@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /press/
+
+Sitemap: https://entropy.kittikun.jp/sitemap.xml
