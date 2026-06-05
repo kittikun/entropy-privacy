@@ -76,6 +76,7 @@
   }
   a{color:var(--accent); text-decoration:none}
   a:hover{color:#8ecbff}
+  .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   .wrap{max-width:920px; margin:0 auto; padding:0 1.25rem}
 
   /* HERO */
@@ -193,8 +194,10 @@
     <!--i18n:switcher-->
     <div class="topbar"><nav class="lang-inline" aria-label="Language"><a href="/" hreflang="en">English</a><span class="sep">·</span><a href="/fr/" hreflang="fr">Français</a><span class="sep">·</span><span class="active" aria-current="true">日本語</span></nav></div>
     <!--/i18n:switcher-->
+    
     <div class="eyebrow">Entropy が贈る</div>
-    <div class="wordmark-svg" role="img" aria-label="The Aurora Chronicles">
+    <h1 class="visually-hidden">The Aurora Chronicles</h1>
+    <div class="wordmark-svg" aria-hidden="true">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13424 974">
         <g fill="#eceef4">
           <path d="M642 689 644 486H614Q608 570 569.0 610.5Q530 651 432 656L386 658V31H480V0H202V31H295V658L250 656Q153 652 114.5 613.5Q76 575 67 486H38L40 689Z" transform="translate(0, 703) scale(1, -1)"/>
