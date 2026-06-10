@@ -19,6 +19,8 @@
     { "key": "index.cta.steam_note", "find": "Windows &middot; macOS &middot; Linux &middot; free demo on Steam" },
     { "key": "index.cta.itch", "find": "Play the free demo" },
     { "key": "index.cta.free_note", "find": "Free demo on itch.io &middot; Windows &middot; no Steam account needed" },
+    { "key": "index.cta.appstore", "find": "Download on the App Store" },
+    { "key": "index.cta.appstore_note", "find": "iPhone &amp; iPad &middot; first episode free" },
     { "key": "index.lead.h2", "find": "The frontier is not what it seems" },
     { "key": "index.lead.p1", "find": "You are the Commander of the <strong>FRV Aurora</strong>, a Frontier Response Vessel dispatched to investigate incidents on humanity's expanding edge. The United Earth Alliance has built a utopia: 150 years of peace, cooperation, and exploration." },
     { "key": "index.lead.p2", "find": "But something is wrong on the frontier. And the more you investigate, the less certain anything becomes." },
