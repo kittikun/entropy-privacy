@@ -4,7 +4,7 @@
     { "key": "common.nav.support", "find": "Support", "before": ">", "after": "</a>" },
     { "key": "common.nav.privacy", "find": "Privacy Policy", "before": ">", "after": "</a>" },
     { "key": "common.nav.cookies", "find": "Cookies", "before": ">", "after": "</a>" },
-    { "key": "common.footer.pub", "find": "<strong>Entropy</strong> &middot; Tokyo, Japan &middot; \u500b\u4eba\u4e8b\u696d\u4e3b" },
+    { "key": "common.footer.pub", "find": "<strong>Entropy</strong> &middot; Tokyo, Japan" },
     { "key": "common.footer.copyright", "find": "&copy; 2025&ndash;2026 Entropy. All rights reserved." }
   ],
 
@@ -75,9 +75,9 @@
     { "key": "privacy.meta.description", "find": "Privacy Policy for The Aurora Chronicles by Entropy: what data we collect, what we don't, and your rights." },
     { "key": "privacy.h1", "find": "Privacy Policy", "before": ">", "after": "</h1>" },
     { "key": "privacy.subtitle", "find": "The Aurora Chronicles &mdash; by Entropy" },
-    { "key": "privacy.effective", "find": "Effective date: February 14, 2026 &middot; Last updated: June 3, 2026" },
+    { "key": "privacy.effective", "find": "Effective date: February 14, 2026 &middot; Last updated: June 11, 2026" },
     { "key": "privacy.s1.h2", "find": "1. Who We Are" },
-    { "key": "privacy.s1.p", "find": "The Aurora Chronicles is developed by kittikun and published by Entropy, a sole proprietorship (\u500b\u4eba\u4e8b\u696d\u4e3b) based in Tokyo, Japan. This policy applies to The Aurora Chronicles on all platforms, including Steam, iOS, and Android." },
+    { "key": "privacy.s1.p", "find": "The Aurora Chronicles is developed and published by Kitti Vongsay (known online as kittikun), a sole proprietor (\u500b\u4eba\u4e8b\u696d\u4e3b) based in Tokyo, Japan, operating under the trade name Entropy. This policy applies to The Aurora Chronicles on all platforms, including Steam, iOS, and Android." },
     { "key": "privacy.s2.h2", "find": "2. What Data We Collect" },
     { "key": "privacy.s2.intro", "find": "We collect only what is necessary to provide the game experience:" },
     { "key": "privacy.s2.li1", "find": "<strong>Save Data:</strong> Your game progress is stored locally on your device. On Steam, save data is also synced via Steam Cloud. We do not currently store saves on our own servers." },
