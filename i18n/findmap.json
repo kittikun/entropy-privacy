@@ -10,7 +10,7 @@
 
   "index": [
     { "key": "index.meta.title", "find": "The Aurora Chronicles \u2014 Sci-Fi Mystery Visual Novel" },
-    { "key": "index.meta.description", "find": "Can optimism survive truth? An episodic sci-fi visual novel. Your choices shape the crew, and the truth." },
+    { "key": "index.meta.description", "find": "Can optimism survive truth? Command the FRV Aurora in an episodic sci-fi visual novel where your choices shape the crew, and the truth. On Steam and iOS." },
     { "key": "index.descriptor", "find": "An episodic sci-fi visual novel. Your choices shape the crew, and the truth." },
     { "key": "index.logline", "find": "Can optimism survive truth?" },
     { "key": "index.eyebrow", "find": "Entropy presents" },
@@ -46,7 +46,7 @@
 
   "support": [
     { "key": "support.meta.title", "find": "Support \u2014 The Aurora Chronicles" },
-    { "key": "support.meta.description", "find": "Get help with The Aurora Chronicles: bug reports, save and data requests, and how to reach Entropy." },
+    { "key": "support.meta.description", "find": "Need help with The Aurora Chronicles? Report a bug, ask about saves and progress, request your data, or contact Entropy about press. Every email gets a reply." },
     { "key": "support.h1", "find": "Support", "before": ">", "after": "</h1>" },
     { "key": "support.tagline", "find": "We read everything. We answer the rest." },
     { "key": "support.help.h2", "find": "How can we help?" },
@@ -72,7 +72,7 @@
 
   "privacy": [
     { "key": "privacy.meta.title", "find": "Privacy Policy \u2014 The Aurora Chronicles" },
-    { "key": "privacy.meta.description", "find": "Privacy Policy for The Aurora Chronicles by Entropy: what data we collect, what we don't, and your rights." },
+    { "key": "privacy.meta.description", "find": "Privacy Policy for The Aurora Chronicles by Entropy: what anonymous data the game collects, what it doesn't, and how to request a copy or deletion of your data." },
     { "key": "privacy.h1", "find": "Privacy Policy", "before": ">", "after": "</h1>" },
     { "key": "privacy.subtitle", "find": "The Aurora Chronicles &mdash; by Entropy" },
     { "key": "privacy.effective", "find": "Effective date: February 14, 2026 &middot; Last updated: June 11, 2026" },
@@ -124,7 +124,7 @@
 
   "cookies": [
     { "key": "cookies.meta.title", "find": "Website Privacy &amp; Cookies \u2014 The Aurora Chronicles" },
-    { "key": "cookies.meta.description", "find": "How the entropy.kittikun.jp website uses analytics and cookies, and how to control them." },
+    { "key": "cookies.meta.description", "find": "How the entropy.kittikun.jp website uses Google Analytics, cookies, and embedded video, how we ask consent by region, and how to control or decline them." },
     { "key": "cookies.h1", "find": "Website Privacy &amp; Cookies", "before": ">", "after": "</h1>" },
     { "key": "cookies.subtitle", "find": "entropy.kittikun.jp &mdash; by Entropy" },
     { "key": "cookies.effective", "find": "Effective date: June 4, 2026" },
