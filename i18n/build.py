@@ -20,6 +20,7 @@ look-behind / look-ahead to disambiguate short repeated words (e.g. nav labels).
 """
 
 import argparse
+import datetime
 import json
 import os
 import re
@@ -281,7 +282,8 @@ def main():
 
     pm = sub.add_parser("sitemap", help="regenerate sitemap.xml for all langs")
     pm.add_argument("--out", help="output root (default: repo root)")
-    pm.add_argument("--date", default="2026-06-04", help="lastmod date (YYYY-MM-DD)")
+    pm.add_argument("--date", default=datetime.date.today().isoformat(),
+                    help="lastmod date (YYYY-MM-DD); defaults to today")
     pm.set_defaults(func=cmd_sitemap)
 
     args = p.parse_args()
