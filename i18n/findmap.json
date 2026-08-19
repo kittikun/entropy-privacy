@@ -59,7 +59,7 @@
     { "key": "support.card2.h3", "find": "Saves &amp; progress" },
     { "key": "support.card2.p", "find": "Your progress is saved locally on your device, and on Steam it also syncs to Steam Cloud. We don't keep copies on our servers, so a deleted or corrupted local save usually can't be restored &mdash; but if a save won't load when it should, that's a bug, and we'd like to hear about it." },
     { "key": "support.card3.h3", "find": "Your data &amp; privacy" },
-    { "key": "support.card3.p", "find": "Request a copy or deletion of the data associated with your anonymous player identifier. See the <a href=\"/privacy-policy\">Privacy Policy</a> for what we store and your rights." },
+    { "key": "support.card3.p", "find": "Request a copy or deletion of the data associated with your anonymous player identifier. See the <a href=\"/privacy-policy/\">Privacy Policy</a> for what we store and your rights." },
     { "key": "support.card4.h3", "find": "Press &amp; business" },
     { "key": "support.card4.p", "find": "Press kits, review keys, curator requests, and partnership inquiries are all welcome at the same address below." },
     { "key": "support.contact.h2", "find": "Contact", "before": ">", "after": "</h2>" },
@@ -122,7 +122,7 @@
     { "key": "privacy.s9.p", "find": "We may update this policy from time to time. Changes will be posted on this page with an updated effective date. Continued use of the game after changes constitutes acceptance of the updated policy." },
     { "key": "privacy.s10.h2", "find": "10. Contact", "before": ">", "after": "</h2>" },
     { "key": "privacy.s10.p", "find": "For privacy requests or any other questions, please reach us through our support page:" },
-    { "key": "privacy.s10.card", "find": "<a href=\"/support\">Visit the Support page &rarr;</a>" }
+    { "key": "privacy.s10.card", "find": "<a href=\"/support/\">Visit the Support page &rarr;</a>" }
   ],
 
   "cookies": [
@@ -132,7 +132,7 @@
     { "key": "cookies.subtitle", "find": "entropy.kittikun.jp &mdash; by Entropy" },
     { "key": "cookies.effective", "find": "Effective date: June 4, 2026" },
     { "key": "cookies.s1.h2", "find": "1. What This Page Covers" },
-    { "key": "cookies.s1.p", "find": "This notice explains how the <strong>entropy.kittikun.jp</strong> website handles analytics and cookies. It is separate from the <a href=\"/privacy-policy\">game's Privacy Policy</a>, which covers data collected inside The Aurora Chronicles on Steam, iOS, and Android." },
+    { "key": "cookies.s1.p", "find": "This notice explains how the <strong>entropy.kittikun.jp</strong> website handles analytics and cookies. It is separate from the <a href=\"/privacy-policy/\">game's Privacy Policy</a>, which covers data collected inside The Aurora Chronicles on Steam, iOS, and Android." },
     { "key": "cookies.s2.h2", "find": "2. Analytics We Use" },
     { "key": "cookies.s2.p1", "find": "We use <strong>Google Analytics 4</strong> to understand how many people visit this website and where they come from &mdash; for example, total visits, which pages are viewed, the referring site or search, and approximate location (country or region). This helps us see which announcements and channels are reaching people." },
     { "key": "cookies.s2.p2", "find": "We use this only in aggregate. We do not build advertising profiles, we do not show ads, and we do not sell or share this data for advertising. Ad-related and personalization signals are disabled." },
@@ -150,6 +150,6 @@
     { "key": "cookies.s6.p", "find": "Website analytics is processed by Google (Google Analytics). Data may be transferred to and processed on Google's servers outside Japan and the EEA, including in the United States, subject to Google's applicable data-transfer safeguards. Google Analytics data is retained for up to 14 months." },
     { "key": "cookies.s7.h2", "find": "7. Contact", "before": ">", "after": "</h2>" },
     { "key": "cookies.s7.p", "find": "For any question about this notice, reach us through our support page:" },
-    { "key": "cookies.s7.card", "find": "<a href=\"/support\">Visit the Support page &rarr;</a>" }
+    { "key": "cookies.s7.card", "find": "<a href=\"/support/\">Visit the Support page &rarr;</a>" }
   ]
 }

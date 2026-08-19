@@ -3,7 +3,7 @@
   "languages": ["en", "fr", "ja"],
   "default": "en",
   "switcher_labels": { "en": "English", "fr": "Fran\u00e7ais", "ja": "\u65e5\u672c\u8a9e" },
-  "nav_links": ["/privacy-policy/website", "/privacy-policy", "/support", "/"],
+  "nav_links": ["/privacy-policy/website/", "/privacy-policy/", "/support/", "/"],
   "pages": [
     {
       "key": "index",
