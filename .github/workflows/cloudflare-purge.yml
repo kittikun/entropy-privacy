@@ -1,0 +1,49 @@
+name: Purge Cloudflare cache
+
+# Pages HTML is edge-cached for 1 day and nothing on this site is
+# content-hashed, so a push to main would otherwise take up to 24h to
+# surface. Fires on deployment_status (NOT push) so the purge happens
+# after GitHub Pages has finished rebuilding -- purging on push would
+# just re-cache the old HTML.
+#
+# Purge is scoped by hostname to entropy.kittikun.jp, which leaves the
+# R2 bundle caches on entropy-aurora-*.kittikun.jp untouched. Never use
+# "purge everything" on this zone.
+
+on:
+  deployment_status:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: cf-purge
+  cancel-in-progress: false
+
+jobs:
+  purge:
+    # deployment_status fires on every state transition; only act on success.
+    # Manual runs (workflow_dispatch) have no deployment_status payload.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge entropy.kittikun.jp from the Cloudflare edge
+        env:
+          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+          CF_PURGE_TOKEN: ${{ secrets.CF_PURGE_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${CF_ZONE_ID}" ] || [ -z "${CF_PURGE_TOKEN}" ]; then
+            echo "::error::CF_ZONE_ID / CF_PURGE_TOKEN repository secrets are not set."
+            exit 1
+          fi
+          resp=$(curl -sS --fail-with-body -X POST \
+            "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/purge_cache" \
+            -H "Authorization: Bearer ${CF_PURGE_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --data '{"hosts":["entropy.kittikun.jp"]}')
+          echo "$resp"
+          echo "$resp" | grep -q '"success":true'
+          echo "Purged entropy.kittikun.jp" >> "$GITHUB_STEP_SUMMARY"
