@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--i18n:head-->
+<link rel="canonical" href="https://entropy.kittikun.jp/ja/terms/">
+<link rel="alternate" hreflang="en" href="https://entropy.kittikun.jp/terms/">
+<link rel="alternate" hreflang="fr" href="https://entropy.kittikun.jp/fr/terms/">
+<link rel="alternate" hreflang="ja" href="https://entropy.kittikun.jp/ja/terms/">
+<link rel="alternate" hreflang="x-default" href="https://entropy.kittikun.jp/terms/">
+<!--/i18n:head-->
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<title>利用規約 | The Aurora Chronicles</title>
+<meta name="description" content="Entropy による The Aurora Chronicles の利用規約です。プレイのためのライセンス、各ストアでの購入と返金、ご利用上のルール、消費者としてのお客様の権利について定めています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#10131a; --panel:#181c26; --panel-2:#1f2430;
+    --border:rgba(255,255,255,.07); --border-strong:rgba(255,255,255,.14);
+    --text:#eceef4; --muted:#878da0; --accent:#64b4ff;
+    --serif:'GFS Didot',Georgia,'Times New Roman',serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{color:#8ecbff}
+  .wrap{max-width:760px; margin:0 auto; padding:0 1.25rem}
+
+  /* HERO */
+  .hero{
+    position:relative; text-align:center; padding:5rem 1.25rem 3rem;
+    background:radial-gradient(ellipse 85% 65% at 50% -8%, rgba(100,180,255,.15), transparent 60%);
+  }
+  .eyebrow{
+    font-size:.7rem; letter-spacing:.34em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:1.4rem;
+  }
+  .eyebrow a{ color:var(--muted); }
+  .eyebrow a:hover{ color:var(--accent); }
+  .hero h1{
+    font-family:var(--serif); font-weight:400; color:#fff;
+    font-size:clamp(2rem,5vw,2.8rem); line-height:1.1;
+  }
+  .hero .subtitle{ color:#aeb4c4; margin-top:.8rem; font-size:1.02rem; }
+  .hero .effective{ color:var(--muted); font-size:.9rem; margin-top:.6rem; }
+
+  /* BODY */
+  main{ padding-bottom:1rem; }
+  h2{ font-family:var(--serif); font-size:1.4rem; font-weight:400; color:#fff;
+    margin-top:2.6rem; margin-bottom:.9rem; padding-bottom:.3rem; border-bottom:1px solid var(--border); }
+  p{ color:#c7cbd8; margin-bottom:1rem; }
+  ul{ margin:0 0 1rem 1.4rem; color:#c7cbd8; }
+  li{ margin-bottom:.45rem; }
+  strong{ color:#fff; font-weight:600; }
+
+  .contact-card{
+    background:var(--panel); border:1px solid var(--border);
+    border-radius:14px; padding:1.4rem 1.5rem; margin-top:.4rem;
+  }
+  .contact-card p{ margin:0; color:#c7cbd8; }
+  .contact-card p + p{ margin-top:.6rem; }
+
+  .hero h1.long{ font-size:clamp(1.6rem,4.2vw,2.3rem); }
+  .facts-wrap{ background:var(--panel); border:1px solid var(--border); border-radius:14px; overflow:hidden; margin:.4rem 0 1.6rem; }
+  .facts{ width:100%; border-collapse:collapse; }
+  .facts th, .facts td{ text-align:left; vertical-align:top; padding:.75rem 1rem; border-bottom:1px solid var(--border); font-size:.95rem; line-height:1.6; }
+  .facts tr:last-child th, .facts tr:last-child td{ border-bottom:0; }
+  .facts thead th{ font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); font-weight:500; background:var(--panel-2); }
+  .facts tbody th{ width:30%; color:#fff; font-weight:600; }
+  .facts td{ color:#c7cbd8; }
+  .form-card p{ font-size:.95rem; }
+  @media (max-width:560px){
+    .facts thead{ display:none; }
+    .facts tbody th, .facts td{ display:block; width:auto; }
+    .facts tbody th{ border-bottom:0; padding-bottom:.1rem; }
+    .facts td{ padding-top:0; }
+  }
+
+  /* FOOTER */
+  footer{ border-top:1px solid var(--border); padding:2.4rem 0 3.4rem; color:var(--muted); font-size:.86rem; margin-top:2.6rem; }
+  footer .pub{ color:#aab0c2; margin-bottom:.5rem; }
+  footer .pub strong{ color:#fff; font-weight:600; }
+  footer a{ color:var(--muted); }
+  footer a:hover{ color:var(--accent); }
+  .foot-nav{ display:flex; gap:1.2rem; flex-wrap:wrap; margin:.6rem 0 1.2rem; }
+
+  /* i18n language switcher */
+  .hero .topbar{ position:absolute; top:1rem; right:1.1rem; }
+  .lang-inline{ display:inline-flex; align-items:center; gap:.55rem; font-size:.84rem; letter-spacing:.01em; }
+  .lang-inline a{ color:var(--muted); text-decoration:none; padding:.35rem .1rem; transition:color .15s; }
+  .lang-inline a:hover{ color:var(--text); }
+  .lang-inline .active{ color:var(--accent); font-weight:500; }
+  .lang-inline .sep{ color:var(--muted); opacity:.5; }
+  @media (max-width:560px){ .hero .topbar{ position:static; margin-bottom:1rem; } }
+</style>
+<!-- Website analytics & consent (Google Consent Mode v2, EEA-gated) -->
+<script src="/consent.js"></script>
+</head>
+<body>
+
+  <header class="hero">
+    <!--i18n:switcher-->
+    <div class="topbar"><nav class="lang-inline" aria-label="Language"><a href="/terms/" hreflang="en">English</a><span class="sep">·</span><a href="/fr/terms/" hreflang="fr">Français</a><span class="sep">·</span><span class="active" aria-current="true">日本語</span></nav></div>
+    <!--/i18n:switcher-->
+    
+    <div class="eyebrow"><a href="/ja/">The Aurora Chronicles</a></div>
+    <h1>利用規約</h1>
+    <p class="subtitle">Entropy による The Aurora Chronicles</p>
+    <p class="effective">施行日：2026年11月6日</p>
+  </header>
+
+  <main class="wrap">
+
+    <h2>1. 運営者について</h2>
+    <p>本規約は、お客様と Entropy との間の契約です。Entropy は、日本・東京を拠点とし、The Aurora Chronicles を配信する個人事業主の屋号です。本ゲームの開発は kittikun が行っています。</p>
+    <div class="contact-card">
+        <p><strong>Entropy</strong><br>5-3 Maruyamacho, MIEUX Shibuya Bldg. 8F, Shibuya-ku, Tokyo 150-0044, Japan<br>メール：support@kittikun.jp</p>
+    </div>
+    <h2>2. 本規約の対象</h2>
+    <p>本規約は、Steam、App Store、Google Play の The Aurora Chronicles、itch.io の無料体験版、および itch.io で販売している本ゲームのサウンドトラックに適用されます。お客様がご利用のストアの規約も、あわせて適用されます。App Store からダウンロードした場合、アプリのライセンスには Apple の標準使用許諾契約が適用され、本規約のライセンス条件と矛盾する部分については、Apple の契約が優先します。本ゲームが処理するデータについては、<a href="/ja/privacy-policy/">プライバシーポリシー</a>で説明しています。</p>
+    <h2>3. お客様のライセンス</h2>
+    <p>本ゲームを入手した場合、またはエピソードを購入した場合、お客様には、ご利用のストアが認めるデバイスとアカウントにおいて、非商用の個人的な目的で本ゲームをプレイするための、個人的、非独占的かつ譲渡不能なライセンスが付与されます。お客様が購入するのはコンテンツを利用するライセンスであり、コンテンツの所有権ではありません。サウンドトラックも同様に、個人での鑑賞を目的としてライセンスされます。</p>
+    <p>当社が関係する権利を管理している範囲で、お客様は、収益化されたチャンネルを含め、本ゲームのライブ配信や、プレイ動画・スクリーンショットの共有を行うことができます。ゲーム内の一部の楽曲は第三者からライセンスを受けているため、動画に著作権の自動申し立てが行われる場合があります。この申し立ては、当社では取り下げることができません。</p>
+    <h2>4. 購入と返金</h2>
+    <p>エピソードは Steam、App Store または Google Play で、サウンドトラックは itch.io でご購入いただけます。決済は各ストアが処理します。返金、キャンセル、撤回のご請求は、購入したストアの手続きをご利用ください。これらのご請求は、各ストアのポリシーと適用される法令に従います。本ゲームやサウンドトラックそのものに問題がある場合は、support@kittikun.jp までご連絡ください。お住まいの国の消費者法に基づくお客様の権利は、影響を受けません。</p>
+    <h2>5. アカウントとデータ</h2>
+    <p>本ゲームにアカウントは必要ありません。お客様に紐づくデータのコピーまたは削除をご希望の場合は、support@kittikun.jp までご連絡ください。詳しくは<a href="/ja/privacy-policy/">プライバシーポリシー</a>をご覧ください。</p>
+    <h2>6. ご利用上のルール</h2>
+    <p>本規約、適用される法令、または第三者コンポーネントのライセンスで認められている場合を除き、本ゲームを転売、貸与またはサブライセンスすること、購入確認の仕組みをクラッキング、回避または改ざんすること、本ゲームのファイルを複製または再配布すること、ストーリー、アート、音楽、ボイスを抽出して他で利用すること（AI モデルの学習に利用することを含みます）は、禁止されています。</p>
+    <p>重大な違反や繰り返しの違反に対処するために合理的に必要な場合、当社はオンライン機能へのアクセスを制限することがあります。緊急の対応が必要な場合を除き、当社はその理由をお伝えし、お客様が是正する機会を設けます。</p>
+    <h2>7. 知的財産</h2>
+    <p>The Aurora Chronicles のストーリー、キャラクター、アート、音楽、ボイスの権利は、Entropy またはそのライセンサーに帰属します。適用される法令や第三者コンポーネントのライセンスに基づくお客様の権利は、影響を受けません。</p>
+    <h2>8. 提供状況と変更</h2>
+    <p>The Aurora Chronicles はアーリーアクセス中で、エピソードごとに配信しています。配信日は変更される場合があります。シーズンパスまたはパックには、まだ配信されていないものも含め、ご購入時に記載されているエピソードが含まれます。Steam でご購入いただくのは、現時点のアーリーアクセス版です。その後、本ゲームに追加されるエピソードは、購入済みのお客様に追加料金なしで提供します。お支払い済みのコンテンツを当社が提供しなかった場合について、適用される消費者法に基づくお客様の権利は影響を受けません。返金をご希望の場合は、購入したストアの手続きをご利用ください。手続きについてお困りの場合は、当社までご連絡ください。</p>
+    <p>当社は、不具合の修正、セキュリティや互換性の向上、法的要件への対応のため、合理的な範囲で更新を行うことがあります。選択統計などのオンライン機能の変更や提供終了には、引き続き、適用される消費者法が定める通知、同意、救済に関する要件が適用されます。オンライン機能の提供を終了しても、購入済みのエピソードに対するライセンスが失われることはありません。</p>
+    <h2>9. 責任</h2>
+    <p>本ゲームには不具合が含まれる場合や、一時的に中断される場合があります。これは、適用される消費者法に基づく当社の義務に影響しません。本規約のいかなる規定も、当社または当社のために行動する者による詐欺、故意の不正行為もしくは重大な過失についての責任、過失により生じた死亡もしくは身体の傷害についての責任、その他法律上除外または制限することができない責任を、除外または制限するものではありません。本規約のいかなる規定も、お住まいの国の強行法規に基づく消費者としてのお客様の権利を制限するものではありません。</p>
+    <h2>10. 準拠法</h2>
+    <p>本規約には日本法が適用されます。お客様が消費者である場合、お住まいの国の強行法規による保護を引き続き受けることができ、その国の裁判所に訴えを提起することもできます。</p>
+    <h2>11. 本規約の変更</h2>
+    <p>当社は、法令や本ゲームの変更を反映するため、本規約を更新することがあります。変更内容は、施行日とともにこのページに掲載します。既存の契約に変更を適用するのは法令が認める場合に限られ、その際は、法令が求める事前の通知または同意の手続きを行います。</p>
+
+  </main>
+
+  <footer class="wrap">
+    <p class="pub"><strong>Entropy</strong> &middot; 日本・東京</p>
+    <div class="foot-nav">
+      <a href="/ja/">ホーム</a>
+      <a href="/ja/support/">サポート</a>
+      <a href="/ja/privacy-policy/">プライバシーポリシー</a>
+      <a href="/ja/privacy-policy/website/">Cookie</a>
+      <a href="/ja/terms/">利用規約</a>
+      <a href="https://store.steampowered.com/app/4262410/The_Aurora_Chronicles/">Steam</a>
+      <a href="https://mix.kittikun.jp" rel="nofollow noopener" target="_blank">Mixes</a>
+    </div>
+    <p>&copy; 2025&ndash;2026 Entropy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

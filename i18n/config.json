@@ -3,7 +3,7 @@
   "languages": ["en", "fr", "ja"],
   "default": "en",
   "switcher_labels": { "en": "English", "fr": "Fran\u00e7ais", "ja": "\u65e5\u672c\u8a9e" },
-  "nav_links": ["/privacy-policy/website/", "/privacy-policy/", "/support/", "/"],
+  "nav_links": ["/privacy-policy/website/", "/privacy-policy/", "/support/", "/terms/", "/"],
   "pages": [
     {
       "key": "index",
@@ -16,6 +16,7 @@
     },
     { "key": "support", "src": "support/index.html", "path": "support/" },
     { "key": "privacy", "src": "privacy-policy/index.html", "path": "privacy-policy/" },
-    { "key": "cookies", "src": "privacy-policy/website/index.html", "path": "privacy-policy/website/" }
+    { "key": "cookies", "src": "privacy-policy/website/index.html", "path": "privacy-policy/website/" },
+    { "key": "terms", "src": "terms/index.html", "path": "terms/" }
   ]
 }
